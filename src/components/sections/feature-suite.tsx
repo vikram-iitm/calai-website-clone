@@ -106,27 +106,24 @@ export default function FeatureSuite() {
               {features.map((feature, index) => (
                 <div 
                   key={index}
-                  className="snap-start group relative rounded-[28px] p-6 lg:p-8 bg-gradient-to-br from-blue-50/80 via-purple-50/80 to-pink-50/80 shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.1)] border border-white/60 transition-all duration-500 hover:scale-[1.01] backdrop-blur-sm"
+                  className="snap-start group relative rounded-[28px] p-8 lg:p-10 bg-[#E8EAF6] shadow-[0_2px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_4px_20px_rgba(0,0,0,0.12)] transition-all duration-300"
                 >
-                  {/* Inner Glow Effect */}
-                  <div className="absolute inset-0 rounded-[28px] ring-1 ring-inset ring-white/40 pointer-events-none" />
-                  
                   <div className="flex flex-col md:flex-row gap-6 lg:gap-8 relative z-10">
                     {/* Left: Text Content */}
-                    <div className="flex-1 space-y-4">
-                      <h3 className="text-xl lg:text-2xl font-bold text-cal-text-primary leading-tight">
+                    <div className="flex-1 space-y-5">
+                      <h3 className="text-2xl lg:text-[28px] font-medium text-[#1a1a1a] leading-tight">
                         {feature.title}
                       </h3>
-                      <p className="text-sm lg:text-base text-cal-text-secondary leading-relaxed">
+                      <p className="text-[15px] lg:text-[16px] text-[#4a4a4a] leading-relaxed">
                         {feature.description}
                       </p>
-                      <ul className="space-y-2.5">
+                      <ul className="space-y-3 pt-1">
                         {feature.bullets.map((bullet, idx) => (
-                          <li key={idx} className="flex items-start gap-2.5">
-                            <div className="mt-0.5 shrink-0 rounded-full bg-blue-500 p-0.5">
-                              <Check className="w-3.5 h-3.5 text-white" strokeWidth={3} />
+                          <li key={idx} className="flex items-center gap-3">
+                            <div className="shrink-0 rounded-full bg-[#5C6BC0] p-1.5 flex items-center justify-center">
+                              <Check className="w-3 h-3 text-white" strokeWidth={3} />
                             </div>
-                            <span className="text-sm font-medium text-cal-text-primary/90">
+                            <span className="text-[15px] font-normal text-[#2a2a2a]">
                               {bullet}
                             </span>
                           </li>
@@ -135,12 +132,12 @@ export default function FeatureSuite() {
                     </div>
 
                     {/* Right: Simple Placeholder */}
-                    <div className="w-full md:w-[180px] lg:w-[200px] shrink-0">
+                    <div className="w-full md:w-[200px] lg:w-[220px] shrink-0 flex items-center justify-center">
                       <div 
-                        className="aspect-[9/16] rounded-[24px] bg-gradient-to-br from-gray-100/90 via-gray-50/90 to-white/90 border border-gray-200/60 shadow-lg flex flex-col items-center justify-center gap-3 group-hover:rotate-1 transition-transform duration-500"
+                        className="w-full aspect-[9/16] rounded-[20px] bg-white/40 border border-gray-200/40 shadow-sm flex flex-col items-center justify-center gap-2.5 overflow-hidden relative"
                       >
-                        <ImageIcon className="w-10 h-10 text-gray-300" strokeWidth={1.5} />
-                        <span className="text-xs font-medium text-gray-400 tracking-wide">
+                        <ImageIcon className="w-8 h-8 text-gray-300" strokeWidth={1.5} />
+                        <span className="text-[11px] font-medium text-gray-400 tracking-wide">
                           App preview
                         </span>
                       </div>
