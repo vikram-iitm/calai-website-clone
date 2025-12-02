@@ -76,14 +76,21 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="overflow-hidden sm:overflow-visible mx-auto pb-40 sm:pb-0 order-1 lg:order-2">
+      <div className="overflow-hidden sm:overflow-visible mx-auto pb-40 sm:pb-0 order-1 lg:order-2 relative flex items-center justify-center gap-4">
         <Image
-          src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/a974e5ea-fdb8-47ff-8492-3699a34ab4d8-calai-app/assets/images/hero-image-2.webp"
-          alt="hero-preview"
-          width={700}
-          height={700}
-          className="h-full"
+          src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/Home-Page-Final-1-1764674039611.png?width=8000&height=8000&resize=contain"
+          alt="SAM app home screen"
+          width={300}
+          height={650}
+          className="rounded-3xl shadow-2xl"
           priority
+        />
+        <Image
+          src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/Home-Page-Navigation-2-2-1764674039421.png?width=8000&height=8000&resize=contain"
+          alt="SAM app navigation screen"
+          width={300}
+          height={650}
+          className="rounded-3xl shadow-2xl"
         />
       </div>
     </main>
