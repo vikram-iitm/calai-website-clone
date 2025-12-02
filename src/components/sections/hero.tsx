@@ -11,22 +11,22 @@ const HeroSection = () => {
               alt="User avatar 1"
               width={38}
               height={38}
-              className="rounded-full object-cover border-2 border-white z-10" />
-
+              className="rounded-full object-cover border-2 border-white z-10"
+            />
             <Image
               src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/a974e5ea-fdb8-47ff-8492-3699a34ab4d8-calai-app/assets/icons/used-by-2-2.png"
               alt="User avatar 2"
               width={38}
               height={38}
-              className="rounded-full object-cover border-2 border-white z-20" />
-
+              className="rounded-full object-cover border-2 border-white z-20"
+            />
             <Image
               src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/a974e5ea-fdb8-47ff-8492-3699a34ab4d8-calai-app/assets/icons/used-by-3-3.png"
               alt="User avatar 3"
               width={38}
               height={38}
-              className="rounded-full object-cover border-2 border-white z-30" />
-
+              className="rounded-full object-cover border-2 border-white z-30"
+            />
           </div>
           <div className="font-medium text-xs sm:text-sm text-cal-text-primary">
             Loved by 5M users with ⭐ 4.9 rating
@@ -52,26 +52,26 @@ const HeroSection = () => {
         <div className="flex flex-col sm:flex-row gap-4 items-center">
           <a
             href="https://apps.apple.com/us/app/cal-ai-calorie-tracker/id6480417616"
-            className="block">
-
+            className="block"
+          >
             <Image
               src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/App_Store_-iOS-Badge-Logo.wine-1764498604359.png?width=8000&height=8000&resize=contain"
               alt="Download on the App Store"
               width={170}
               height={60}
-              className="object-contain !w-full !h-full !max-w-full" />
-
+              className="h-[50px] w-auto object-contain"
+            />
           </a>
           <a
             href="https://play.google.com/store/apps/details?id=com.viraldevelopment.calai"
-            className="block">
-
+            className="block"
+          >
             <Image
               src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/a974e5ea-fdb8-47ff-8492-3699a34ab4d8-calai-app/assets/images/googleplay-1.png"
               alt="Get it on Google Play"
               width={170}
-              height={60} className="!w-full !h-full !max-w-full" />
-
+              height={60}
+            />
           </a>
         </div>
       </div>
@@ -83,11 +83,11 @@ const HeroSection = () => {
           width={700}
           height={700}
           className="h-full"
-          priority />
-
+          priority
+        />
       </div>
-    </main>);
-
+    </main>
+  );
 };
 
 export default HeroSection;
