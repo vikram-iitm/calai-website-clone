@@ -76,22 +76,49 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="overflow-hidden sm:overflow-visible mx-auto pb-40 sm:pb-0 order-1 lg:order-2 relative flex items-center justify-center gap-4">
-        <Image
-          src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/Home-Page-Final-1-1764674039611.png?width=8000&height=8000&resize=contain"
-          alt="SAM app home screen"
-          width={300}
-          height={650}
-          className="rounded-3xl shadow-2xl"
-          priority
-        />
-        <Image
-          src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/Home-Page-Navigation-2-2-1764674039421.png?width=8000&height=8000&resize=contain"
-          alt="SAM app navigation screen"
-          width={300}
-          height={650}
-          className="rounded-3xl shadow-2xl"
-        />
+      <div className="overflow-hidden sm:overflow-visible mx-auto pb-40 sm:pb-0 order-1 lg:order-2 relative flex items-center justify-center gap-8">
+        {/* Left Phone - Scanner Screen */}
+        <div className="relative">
+          <Image
+            src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/Home-Page-Final-1-1764674039611.png?width=8000&height=8000&resize=contain"
+            alt="SAM app home screen"
+            width={280}
+            height={600}
+            className="rounded-3xl shadow-2xl"
+            priority
+          />
+        </div>
+
+        {/* Flowing Arrow */}
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden sm:block pointer-events-none z-10">
+          <svg width="140" height="100" viewBox="0 0 140 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path 
+              d="M 10 50 Q 70 20, 120 50" 
+              stroke="#000000" 
+              strokeWidth="2.5" 
+              fill="none"
+              strokeLinecap="round"
+            />
+            <path 
+              d="M 120 50 L 110 45 M 120 50 L 110 55" 
+              stroke="#000000" 
+              strokeWidth="2.5" 
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </div>
+
+        {/* Right Phone - Results Screen */}
+        <div className="relative">
+          <Image
+            src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/Home-Page-Navigation-2-2-1764674039421.png?width=8000&height=8000&resize=contain"
+            alt="SAM app navigation screen"
+            width={280}
+            height={600}
+            className="rounded-3xl shadow-2xl"
+          />
+        </div>
       </div>
     </main>
   );
