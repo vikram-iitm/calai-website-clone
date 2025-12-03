@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const features = [
   {
-    icon: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/s211114-car-tran006-mainpreview-98c1b8038b213aece57e1aaf2869ebff977725e579c2053d4fb55b54bceef39c-1764773218670.jpg?width=8000&height=8000&resize=contain",
+    icon: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/1801444-1764773784520.png?width=8000&height=8000&resize=contain",
     title: "Cab Booking",
     description: "Compare Uber and Ola prices instantly, get ETAs, and book rides with deep links",
     gradient: "from-gray-600 to-gray-800",
@@ -14,7 +14,7 @@ const features = [
     ]
   },
   {
-    icon: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/1725636648368_d0b4f2eca0834b833cb6_512-1764773198088.png?width=8000&height=8000&resize=contain",
+    icon: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/calendar-3d-icon-png-download-8817292-1764773824013.webp?width=8000&height=8000&resize=contain",
     title: "Calendar Actions",
     description: "Create, edit events and check availability with seamless Google Calendar integration",
     gradient: "from-slate-600 to-slate-800",
