@@ -14,11 +14,11 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-b from-white via-[#FFFFF0] via-[#F0F8FF] to-[#FFFFF0]">
       <Header />
       <HeroSection />
+      <DarkModeFeature />
       {/* Hidden for now: <FeatureSuite /> */}
       {/* Hidden for now: <TestimonialsGrid /> */}
       <FeaturesInteractive />
       <BenefitsCards />
-      <DarkModeFeature />
       <UserReviewsSection />
       <RatingsCta />
       <Footer />
