@@ -51,8 +51,8 @@ const FeaturesInteractive = () => {
         What does AltSelf include?
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
-        <div className="relative mx-auto lg:mx-0 mb-12 lg:mb-0">
-          <div className="relative rounded-3xl shadow-[0_8px_40px_rgba(0,0,0,0.12)] overflow-hidden bg-white p-4">
+        <div className="relative mx-auto lg:mx-0 mb-12 lg:mb-0 w-full max-w-[350px]">
+          <div className="relative rounded-3xl shadow-[0_8px_40px_rgba(0,0,0,0.12)] overflow-hidden bg-white p-4 max-h-[600px] lg:max-h-[700px]">
             <Image
               key={activeIndex}
               src={features[activeIndex].imageSrc}
@@ -60,7 +60,7 @@ const FeaturesInteractive = () => {
               width={350}
               height={758}
               priority
-              className="w-full h-auto transition-all duration-500 ease-out mx-auto"
+              className="w-full h-auto max-h-[550px] lg:max-h-[650px] object-contain transition-all duration-500 ease-out mx-auto"
             />
           </div>
           <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3 bg-white px-4 py-2 rounded-full shadow-lg">
