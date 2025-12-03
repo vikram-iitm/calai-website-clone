@@ -1,11 +1,10 @@
 "use client";
 
-import { Car, Calendar, Music, MapPin, CloudSun, MessageSquare } from "lucide-react";
 import Image from "next/image";
 
 const features = [
   {
-    icon: Car,
+    icon: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/s211114-car-tran006-mainpreview-98c1b8038b213aece57e1aaf2869ebff977725e579c2053d4fb55b54bceef39c-1764773218670.jpg?width=8000&height=8000&resize=contain",
     title: "Cab Booking",
     description: "Compare Uber and Ola prices instantly, get ETAs, and book rides with deep links",
     gradient: "from-gray-600 to-gray-800",
@@ -15,7 +14,7 @@ const features = [
     ]
   },
   {
-    icon: Calendar,
+    icon: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/1725636648368_d0b4f2eca0834b833cb6_512-1764773198088.png?width=8000&height=8000&resize=contain",
     title: "Calendar Actions",
     description: "Create, edit events and check availability with seamless Google Calendar integration",
     gradient: "from-slate-600 to-slate-800",
@@ -24,7 +23,7 @@ const features = [
     ]
   },
   {
-    icon: Music,
+    icon: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/music-3d-icon-png-download-12454587-1764773218972.webp?width=8000&height=8000&resize=contain",
     title: "Spotify Control",
     description: "Play, pause, skip tracks, and control your music with simple voice commands",
     gradient: "from-zinc-600 to-zinc-800",
@@ -33,7 +32,7 @@ const features = [
     ]
   },
   {
-    icon: MapPin,
+    icon: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/5323926-1764773198164.png?width=8000&height=8000&resize=contain",
     title: "Navigation",
     description: "Smart routing with Google Maps for accurate turn-by-turn directions",
     gradient: "from-gray-700 to-gray-900",
@@ -42,7 +41,7 @@ const features = [
     ]
   },
   {
-    icon: CloudSun,
+    icon: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/9098495-1764773198240.png?width=8000&height=8000&resize=contain",
     title: "Weather & Time",
     description: "Get real-time weather updates and timezone information for any location",
     gradient: "from-slate-700 to-slate-900",
@@ -51,7 +50,7 @@ const features = [
     ]
   },
   {
-    icon: MessageSquare,
+    icon: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/134914-1764773198075.png?width=8000&height=8000&resize=contain",
     title: "General Knowledge",
     description: "Ask anything and receive instant, accurate AI-powered answers",
     gradient: "from-zinc-700 to-zinc-900",
@@ -87,7 +86,6 @@ export default function DarkModeFeature() {
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {features.map((feature, index) => {
-            const Icon = feature.icon;
             return (
               <div 
                 key={index}
@@ -103,9 +101,15 @@ export default function DarkModeFeature() {
                 
                 {/* Icon with gradient */}
                 <div className="relative mb-6">
-                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${feature.gradient} p-[2px] shadow-lg group-hover:shadow-xl group-hover:shadow-${feature.gradient.split('-')[1]}-500/50 transition-all duration-700`}>
-                    <div className="w-full h-full rounded-2xl bg-white group-hover:bg-gray-900 flex items-center justify-center transition-colors duration-700">
-                      <Icon className="w-8 h-8 text-gray-700 group-hover:text-white transition-colors duration-700" strokeWidth={1.5} />
+                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${feature.gradient} p-[2px] shadow-lg group-hover:shadow-xl transition-all duration-700`}>
+                    <div className="w-full h-full rounded-2xl bg-white group-hover:bg-gray-900 flex items-center justify-center transition-colors duration-700 p-2">
+                      <Image 
+                        src={feature.icon} 
+                        alt={feature.title}
+                        width={48}
+                        height={48}
+                        className="w-full h-full object-contain"
+                      />
                     </div>
                   </div>
                 </div>
