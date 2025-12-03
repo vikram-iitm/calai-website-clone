@@ -1,95 +1,97 @@
-"use client";
-
 import Image from 'next/image';
-import { useState } from 'react';
 
-const features = [
+const testimonials = [
   {
-    id: 1,
-    title: 'Smart Calling',
-    description: 'Call anyone by just saying their name—SAM handles contact access seamlessly',
-    imageSrc: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/Home-Page-Calling-3-1-1764763869705.png',
+    name: 'Sarah Chen',
+    quote: 'SAM has completely transformed my daily routine. From comparing Uber and Ola prices to managing my calendar—it handles everything seamlessly.',
+    imageSrc: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/a974e5ea-fdb8-47ff-8492-3699a34ab4d8-calai-app/assets/images/jeremiah-3.jpg',
+    instagramUrl: '#',
+    ariaLabel: 'View Sarah Chen testimonial',
   },
   {
-    id: 2,
-    title: 'Navigation',
-    description: 'Find nearby places and get instant directions with integrated maps',
-    imageSrc: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/Home-Page-Navigation-2-5-1764763881187.png',
+    name: 'Michael Rodriguez',
+    quote: 'The voice commands are incredibly intuitive. I can book rides, check weather, set timers and alarms without even unlocking my phone.',
+    imageSrc: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/a974e5ea-fdb8-47ff-8492-3699a34ab4d8-calai-app/assets/images/jacked2-4.png',
+    instagramUrl: '#',
+    ariaLabel: 'View Michael Rodriguez testimonial',
   },
   {
-    id: 3,
-    title: 'Calendar Integration',
-    description: 'Add meetings to Google Calendar with voice commands and smart reminders',
-    imageSrc: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/Home-Page-Google-Calender-1-1-1764763934832.png',
+    name: 'Priya Sharma',
+    quote: "SAM's calendar integration is a game-changer. It handles all my meeting scheduling and sends perfect reminders. I'm never late anymore!",
+    imageSrc: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/a974e5ea-fdb8-47ff-8492-3699a34ab4d8-calai-app/assets/images/dawson-5.png',
+    instagramUrl: '#',
+    ariaLabel: 'View Priya Sharma testimonial',
   },
   {
-    id: 4,
-    title: 'Ride Booking',
-    description: 'Compare Uber and Ola prices, book rides hands-free with location detection',
-    imageSrc: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/UBER-1764764012630.png',
+    name: 'James Wilson',
+    quote: 'Best personal assistant app I\'ve used. The cab price comparison between Ola and Uber alone saves me so much money every month.',
+    imageSrc: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/a974e5ea-fdb8-47ff-8492-3699a34ab4d8-calai-app/assets/images/jacked3-6.png',
+    instagramUrl: '#',
+    ariaLabel: 'View James Wilson testimonial',
+  },
+  {
+    name: 'Emily Thompson',
+    quote: "I love how SAM connects everything—my Google Calendar, contacts, Spotify, and Maps. It's like having a smart assistant that actually understands me.",
+    imageSrc: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/a974e5ea-fdb8-47ff-8492-3699a34ab4d8-calai-app/assets/images/jacked1-7.png',
+    instagramUrl: '#',
+    ariaLabel: 'View Emily Thompson testimonial',
+  },
+  {
+    name: 'David Kumar',
+    quote: "The navigation and media controls are brilliant. Just ask SAM and it opens Google Maps with the route or plays your Spotify playlist instantly!",
+    imageSrc: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/a974e5ea-fdb8-47ff-8492-3699a34ab4d8-calai-app/assets/images/jacked4-8.png',
+    instagramUrl: '#',
+    ariaLabel: 'View David Kumar testimonial',
   },
 ];
 
+type TestimonialCardProps = (typeof testimonials)[0];
+
+const TestimonialCard = ({ name, quote, imageSrc, instagramUrl, ariaLabel }: TestimonialCardProps) => (
+  <a href={instagramUrl} aria-label={ariaLabel} target="_blank" rel="noopener noreferrer">
+    <div className="relative rounded-3xl overflow-hidden shadow-lg group">
+      <Image
+        src={imageSrc}
+        alt={`${name} testimonial`}
+        width={400}
+        height={550}
+        className="w-full h-auto object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
+      />
+      <div className="absolute bottom-0 left-0 right-0 m-4 p-6 bg-black/20 backdrop-blur-md text-white border border-[rgba(207,207,207,0.47)] rounded-xl">
+        <p className="text-4xl font-bold text-blue-400 -mt-2 -mb-5">
+          "
+        </p>
+        <h3 className="text-xl font-semibold mb-1">{name}</h3>
+        <p className="text-sm font-light opacity-90">{quote}</p>
+      </div>
+    </div>
+  </a>
+);
+
 const TestimonialsGrid = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const firstColTestimonials = testimonials.slice(0, 2);
+  const secondColTestimonials = testimonials.slice(2, 4);
+  const thirdColTestimonials = testimonials.slice(4, 6);
 
   return (
     <section>
       <h2 className="text-center text-[48px] font-medium sm:mt-52 mt-24 text-cal-text-primary px-4">
         Loved by users worldwide 🌟
       </h2>
-      
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto mt-40 px-4">
-        {/* iPhone Mockup with Image */}
-        <div className="relative mx-auto lg:mx-0">
-          <div className="relative w-full max-w-[300px] lg:max-w-[350px] mx-auto">
-            {/* iPhone Frame */}
-            <div className="relative rounded-[40px] overflow-hidden shadow-2xl bg-black">
-              <Image
-                key={activeIndex}
-                src={features[activeIndex].imageSrc}
-                alt={features[activeIndex].title}
-                width={350}
-                height={700}
-                className="w-full h-auto object-cover transition-opacity duration-300"
-              />
-            </div>
-            
-            {/* Pagination Dots */}
-            <div className="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2 flex space-x-2">
-              {features.map((feature, index) => (
-                <button
-                  key={feature.id}
-                  onClick={() => setActiveIndex(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === activeIndex ? 'bg-gray-800 w-8' : 'bg-gray-300'
-                  }`}
-                  aria-label={`View ${feature.title}`}
-                />
-              ))}
-            </div>
-          </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[21px] mt-40 px-4 max-w-screen-xl mx-auto">
+        <div className="flex flex-col gap-[21px]">
+          {firstColTestimonials.map((testimonial) => (
+            <TestimonialCard key={testimonial.name} {...testimonial} />
+          ))}
         </div>
-
-        {/* Interactive Feature Cards */}
-        <div className="flex flex-col gap-5">
-          {features.map((feature, index) => (
-            <button
-              key={feature.id}
-              onClick={() => setActiveIndex(index)}
-              className={`text-left p-5 md:p-6 rounded-2xl border-2 transition-all duration-300 ${
-                index === activeIndex
-                  ? 'scale-105 border-black bg-gray-100 shadow-lg'
-                  : 'border-gray-200 bg-white hover:border-gray-400 hover:shadow-md'
-              }`}
-            >
-              <h3 className="text-lg md:text-xl font-semibold mb-2 text-cal-text-primary">
-                {feature.title}
-              </h3>
-              <p className="text-sm md:text-base text-cal-text-muted">
-                {feature.description}
-              </p>
-            </button>
+        <div className="flex flex-col gap-[21px] md:-translate-y-20">
+          {secondColTestimonials.map((testimonial) => (
+            <TestimonialCard key={testimonial.name} {...testimonial} />
+          ))}
+        </div>
+        <div className="flex flex-col gap-[21px]">
+          {thirdColTestimonials.map((testimonial) => (
+            <TestimonialCard key={testimonial.name} {...testimonial} />
           ))}
         </div>
       </div>

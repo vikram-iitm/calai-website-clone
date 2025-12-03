@@ -33,7 +33,7 @@ const SupportSection = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-white to-[#F0F8FF]">
+    <section id="support" className="py-16 md:py-24 bg-gradient-to-b from-white to-[#F0F8FF]">
       <div className="max-w-4xl mx-auto px-5 xl:px-0">
         <h2 className="text-4xl md:text-5xl font-medium text-center mb-4 text-cal-text-primary">
           Support & FAQs

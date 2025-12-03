@@ -1,6 +1,6 @@
 const AboutSection = () => {
   return (
-    <section className="py-16 md:py-24 max-w-screen-xl mx-auto px-5 xl:px-0">
+    <section id="about" className="py-16 md:py-24 max-w-screen-xl mx-auto px-5 xl:px-0">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div>
           <h2 className="text-4xl md:text-5xl font-medium mb-6 text-cal-text-primary">

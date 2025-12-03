@@ -41,7 +41,7 @@ const GroupedFeatures = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 max-w-screen-xl mx-auto px-5 xl:px-0">
+    <section id="features" className="py-16 md:py-24 max-w-screen-xl mx-auto px-5 xl:px-0">
       <h2 className="text-4xl md:text-5xl font-medium text-center mb-12 text-cal-text-primary">
         What does AltSelf include?
       </h2>

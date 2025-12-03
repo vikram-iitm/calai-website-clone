@@ -7,18 +7,18 @@ import { Menu, X } from 'lucide-react';
 
 const navLinks = [
 { name: 'Home', href: '/' },
-{ name: 'Jobs', href: 'mailto:apply@calai.app' },
-{ name: 'Press', href: '/press' },
-{ name: 'Manage Subscription', href: '/manage-subscription' }];
+{ name: 'Features', href: '/#features' },
+{ name: 'About', href: '/#about' },
+{ name: 'Support', href: '/#support' }];
 
 
 const AppStoreButton = () =>
 <a
-  href="https://apps.apple.com/us/app/cal-ai-calorie-tracker/id6480417616?ppid=0fdd527c-4a8a-4b3f-9db0-ee844938c041"
+  href="#"
   aria-label="Download on the App Store">
 
     <Image
-    src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/2-1764747544409.png?width=8000&height=8000&resize=contain"
+    src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/2-1764761365453.png?width=8000&height=8000&resize=contain"
     alt="Download on the App Store"
     width={135}
     height={60}
@@ -29,7 +29,7 @@ const AppStoreButton = () =>
 
 const GooglePlayButton = () =>
 <a
-  href="https://play.google.com/store/apps/details?id=com.viraldevelopment.calai"
+  href="#"
   aria-label="Get it on Google Play">
 
     <Image
@@ -69,13 +69,7 @@ const Header = () => {
         <div className="w-full">
           <div className="flex w-full items-center justify-between">
             <Link href="/" className="flex items-center gap-2">
-              <Image
-                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/a974e5ea-fdb8-47ff-8492-3699a34ab4d8-calai-app/assets/icons/logo-8.png"
-                alt="Cal AI Logo"
-                width={28}
-                height={28} />
-
-              <span className="text-xl font-bold text-black !whitespace-pre-line">AltSelf</span>
+              <span className="text-2xl font-bold text-black">AltSelf</span>
             </Link>
             <button
               className="block lg:hidden"
