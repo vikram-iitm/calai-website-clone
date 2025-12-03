@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
+import { WaitlistDialog } from '@/components/waitlist-dialog';
 
 const navLinks = [
 { name: 'Home', href: '/' },
@@ -11,8 +12,10 @@ const navLinks = [
 { name: 'About', href: '/#about' },
 { name: 'Support', href: '/#support' }];
 
-const JoinWaitlistButton = () => (
-  <button className="bg-black text-white px-6 py-3 rounded-full font-semibold text-sm hover:bg-gray-800 transition-all duration-300 hover:scale-105 shadow-lg whitespace-nowrap">
+const JoinWaitlistButton = ({ onClick }: { onClick: () => void }) => (
+  <button 
+    onClick={onClick}
+    className="bg-black text-white px-6 py-3 rounded-full font-semibold text-sm hover:bg-gray-800 transition-all duration-300 hover:scale-105 shadow-lg whitespace-nowrap">
     Join the waitlist
   </button>
 );
@@ -37,6 +40,7 @@ const NavLink = ({ name, href }: {name: string;href: string;}) => {
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [dialogOpen, setDialogOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 bg-white/20 px-5 py-4 backdrop-blur-xl xl:px-0">
@@ -75,15 +79,17 @@ const Header = () => {
               )}
             </ul>
             <div className="mt-3 flex justify-center">
-              <JoinWaitlistButton />
+              <JoinWaitlistButton onClick={() => setDialogOpen(true)} />
             </div>
           </div>
         </div>
 
         <div className="hidden lg:flex">
-          <JoinWaitlistButton />
+          <JoinWaitlistButton onClick={() => setDialogOpen(true)} />
         </div>
       </div>
+
+      <WaitlistDialog open={dialogOpen} onOpenChange={setDialogOpen} />
     </header>);
 
 };
