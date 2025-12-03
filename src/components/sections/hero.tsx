@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -50,18 +51,20 @@ const HeroSection = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 items-center">
-          <a
-            href="#"
+          <Link
+            href="https://apps.apple.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="block"
           >
             <Image
-              src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/App_Store_-iOS-Badge-Logo.wine-1764498604359.png?width=8000&height=8000&resize=contain"
+              src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/download-on-the-app-store-badge-vector-11573976703gflfeuhxyt-1764746969906.png?width=8000&height=8000&resize=contain"
               alt="Download on the App Store"
-              width={170}
+              width={135}
               height={60}
               className="h-[60px] w-auto object-contain"
             />
-          </a>
+          </Link>
           <a
             href="#"
             className="block"
