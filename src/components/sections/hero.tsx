@@ -2,8 +2,12 @@
 
 import { motion } from "framer-motion";
 import { Mic } from "lucide-react";
+import { useState } from "react";
+import { WaitlistDialog } from "@/components/waitlist-dialog";
 
 const HeroSection = () => {
+  const [dialogOpen, setDialogOpen] = useState(false);
+
   return (
     <main className="grid grid-cols-1 lg:grid-cols-2 mt-10 items-center max-w-screen-xl mx-auto px-5 xl:px-0 gap-12">
       <div className="flex flex-col gap-4 w-fit mx-auto lg:mx-0 p-5 sm:p-0 -mt-10 order-2 lg:order-1">
@@ -58,7 +62,10 @@ const HeroSection = () => {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 items-center mt-2">
-          <button className="bg-black text-white px-8 py-4 rounded-full font-semibold text-base hover:bg-blue-600 transition-all duration-300 hover:scale-105 shadow-lg flex items-center gap-2">
+          <button 
+            onClick={() => setDialogOpen(true)}
+            className="bg-black text-white px-8 py-4 rounded-full font-semibold text-base hover:bg-blue-600 transition-all duration-300 hover:scale-105 shadow-lg flex items-center gap-2"
+          >
             Join Waitlist
           </button>
         </div>
@@ -315,6 +322,8 @@ const HeroSection = () => {
           }}
         />
       </div>
+
+      <WaitlistDialog open={dialogOpen} onOpenChange={setDialogOpen} />
     </main>
   );
 };
