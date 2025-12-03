@@ -51,23 +51,27 @@ const FeaturesInteractive = () => {
         What does AltSelf include?
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
-        <div className="relative mx-auto lg:mx-0">
-          <Image
-            key={activeIndex}
-            src={features[activeIndex].imageSrc}
-            alt={features[activeIndex].alt}
-            width={350}
-            height={758}
-            priority
-            className="w-[300px] lg:w-[350px] h-auto transition-opacity duration-300 ease-in-out mx-auto"
-          />
-          <div className="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2 flex space-x-2">
+        <div className="relative mx-auto lg:mx-0 mb-12 lg:mb-0">
+          <div className="relative rounded-3xl shadow-[0_8px_40px_rgba(0,0,0,0.12)] overflow-hidden bg-white p-4">
+            <Image
+              key={activeIndex}
+              src={features[activeIndex].imageSrc}
+              alt={features[activeIndex].alt}
+              width={350}
+              height={758}
+              priority
+              className="w-full h-auto transition-all duration-500 ease-out mx-auto"
+            />
+          </div>
+          <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3 bg-white px-4 py-2 rounded-full shadow-lg">
             {features.map((feature, index) => (
               <button
                 key={feature.id}
                 onClick={() => setActiveIndex(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  activeIndex === index ? "bg-gray-800" : "bg-gray-300"
+                className={`transition-all duration-300 rounded-full ${
+                  activeIndex === index 
+                    ? "w-8 h-3 bg-black" 
+                    : "w-3 h-3 bg-gray-300 hover:bg-gray-400"
                 }`}
                 aria-label={`Go to feature: ${feature.title}`}
               />
@@ -75,21 +79,21 @@ const FeaturesInteractive = () => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 lg:gap-6">
+        <div className="flex flex-col gap-4 lg:gap-6 mt-8 lg:mt-0">
           {features.map((feature, index) => (
             <div
               key={feature.id}
               onClick={() => setActiveIndex(index)}
-              className={`p-6 rounded-2xl border transition-all duration-300 cursor-pointer ${
+              className={`p-8 rounded-3xl border transition-all duration-500 cursor-pointer ${
                 activeIndex === index
-                  ? "scale-105 border-black bg-gray-100"
-                  : "border-gray-200 bg-white"
+                  ? "border-black bg-gray-50 shadow-[0_8px_30px_rgba(0,0,0,0.12)] scale-[1.02]"
+                  : "border-gray-200 bg-white shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_6px_25px_rgba(0,0,0,0.1)] hover:border-gray-300"
               }`}
             >
-              <h3 className="text-lg lg:text-xl font-semibold mb-2">
+              <h3 className="text-xl lg:text-2xl font-semibold mb-3">
                 {feature.title}
               </h3>
-              <p className="text-sm lg:text-base opacity-70">
+              <p className="text-sm lg:text-base text-gray-600 leading-relaxed">
                 {feature.description}
               </p>
             </div>
