@@ -65,9 +65,6 @@ export default function DarkModeFeature() {
   return (
     <section 
       className="py-32 lg:py-64 px-4 overflow-hidden"
-      style={{
-        background: 'linear-gradient(180deg, #F0F8FF 0%, #FFFFF0 50%, #FFE4E1 100%)'
-      }}
     >
       <div className="max-w-screen-xl mx-auto">
         {/* Header */}
