@@ -64,32 +64,32 @@ export default function DarkModeFeature() {
   return (
     <section
       id="capabilities"
-      className="py-32 lg:py-64 px-4 overflow-hidden !w-full !h-[1288px]">
+      className="py-16 md:py-32 lg:py-64 px-4 overflow-hidden">
 
       <div className="max-w-screen-xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16 lg:mb-20">
+        <div className="text-center mb-12 md:mb-16 lg:mb-20">
           <div className="inline-block mb-4">
-            <span className="text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full border border-gray-300 bg-gray-100 text-gray-700">
+            <span className="text-xs font-semibold tracking-widest uppercase px-3 md:px-4 py-2 rounded-full border border-gray-300 bg-gray-100 text-gray-700">
               Capabilities
             </span>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-cal-text-primary mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-cal-text-primary mb-4 md:mb-6 px-4">
             Get more value from your assistant
           </h2>
-          <p className="text-lg text-cal-text-secondary max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-cal-text-secondary max-w-2xl mx-auto px-4">
             Connect your favorite tools and streamline your day. AltSelf integrates with 10+ services 
             to bring everything you need into one intelligent assistant.
           </p>
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-8">
           {features.map((feature, index) => {
             return (
               <div
                 key={index}
-                className="group relative bg-white/80 backdrop-blur-sm rounded-3xl p-8 border border-gray-200/50 shadow-lg shadow-gray-200/50 hover:-translate-y-2 transition-all duration-700 overflow-hidden hover:bg-gradient-to-br hover:from-gray-900 hover:to-black hover:border-gray-700/50 hover:shadow-2xl hover:shadow-black/40">
+                className="group relative bg-white/80 backdrop-blur-sm rounded-2xl md:rounded-3xl p-6 md:p-8 border border-gray-200/50 shadow-lg shadow-gray-200/50 hover:-translate-y-2 transition-all duration-700 overflow-hidden hover:bg-gradient-to-br hover:from-gray-900 hover:to-black hover:border-gray-700/50 hover:shadow-2xl hover:shadow-black/40">
 
                 {/* Animated gradient overlay on hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-700`} />
@@ -100,52 +100,48 @@ export default function DarkModeFeature() {
                 </div>
                 
                 {/* Icon with gradient */}
-                <div className="relative mb-6">
-                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${feature.gradient} p-[2px] shadow-lg group-hover:shadow-xl transition-all duration-700`}>
-                    <div className="w-full h-full rounded-2xl bg-gray-900 group-hover:bg-white flex items-center justify-center transition-colors duration-700 p-2">
+                <div className="relative mb-5 md:mb-6">
+                  <div className={`w-14 h-14 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-gradient-to-br ${feature.gradient} p-[2px] shadow-lg group-hover:shadow-xl transition-all duration-700`}>
+                    <div className="w-full h-full rounded-xl md:rounded-2xl bg-gray-900 group-hover:bg-white flex items-center justify-center transition-colors duration-700 p-2">
                       <Image
                         src={feature.icon}
                         alt={feature.title}
                         width={48}
                         height={48}
                         className="w-full h-full object-contain" />
-
                     </div>
                   </div>
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-bold text-cal-text-primary group-hover:text-white mb-3 relative transition-colors duration-700">
+                <h3 className="text-lg md:text-xl font-bold text-cal-text-primary group-hover:text-white mb-2 md:mb-3 relative transition-colors duration-700">
                   {feature.title}
                 </h3>
-                <p className="text-sm text-cal-text-secondary group-hover:text-gray-300 leading-relaxed mb-8 relative transition-colors duration-700">
+                <p className="text-sm text-cal-text-secondary group-hover:text-gray-300 leading-relaxed mb-6 md:mb-8 relative transition-colors duration-700">
                   {feature.description}
                 </p>
 
                 {/* App Icons */}
-                <div className="flex items-center gap-4 pt-6 border-t border-gray-200/50 group-hover:border-gray-700/50 relative transition-colors duration-700">
+                <div className="flex items-center gap-3 md:gap-4 pt-4 md:pt-6 border-t border-gray-200/50 group-hover:border-gray-700/50 relative transition-colors duration-700">
                   {feature.apps.map((app, appIndex) =>
-                  <div key={appIndex} className="flex items-center gap-2.5 group/app">
-                      <div className="w-10 h-10 rounded-xl overflow-hidden bg-white shadow-md ring-1 ring-gray-200/80 group-hover:ring-white/20 group-hover/app:ring-2 group-hover/app:ring-white/40 group-hover/app:shadow-lg transition-all duration-700">
+                  <div key={appIndex} className="flex items-center gap-2 md:gap-2.5 group/app">
+                      <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg md:rounded-xl overflow-hidden bg-white shadow-md ring-1 ring-gray-200/80 group-hover:ring-white/20 group-hover/app:ring-2 group-hover/app:ring-white/40 group-hover/app:shadow-lg transition-all duration-700 flex-shrink-0">
                         <Image
                         src={app.logo}
                         alt={app.name}
                         width={40}
                         height={40}
                         className="w-full h-full object-cover" />
-
                       </div>
-                      <span className="text-sm font-semibold text-gray-700 group-hover:text-white group-hover/app:text-white transition-colors duration-700">
+                      <span className="text-xs md:text-sm font-semibold text-gray-700 group-hover:text-white group-hover/app:text-white transition-colors duration-700">
                         {app.name}
                       </span>
                     </div>
                   )}
                 </div>
               </div>);
-
           })}
         </div>
       </div>
     </section>);
-
 }

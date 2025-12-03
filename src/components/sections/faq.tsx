@@ -48,12 +48,12 @@ const faqData: FAQItem[] = [
 
 const FAQSection = () => {
   return (
-    <section id="faq" className="py-24 sm:py-32 bg-gradient-to-b from-[#FFFFF0] to-[#F0F8FF]">
+    <section id="faq" className="py-16 md:py-24 lg:py-32 bg-gradient-to-b from-[#FFFFF0] to-[#F0F8FF]">
       <div className="container mx-auto px-4">
-        <h2 className="text-center text-4xl/[1.2] md:text-[48px] font-medium text-[var(--cal-text-primary)] mb-4">
+        <h2 className="text-center text-3xl md:text-4xl lg:text-[48px] font-medium text-[var(--cal-text-primary)] mb-3 md:mb-4">
           Frequently Asked Questions
         </h2>
-        <p className="text-center text-lg text-[var(--cal-text-muted)] mb-16 max-w-2xl mx-auto">
+        <p className="text-center text-base md:text-lg text-[var(--cal-text-muted)] mb-12 md:mb-16 max-w-2xl mx-auto px-4">
           Got questions? We've got answers. Find everything you need to know about AltSelf.
         </p>
         
@@ -63,12 +63,12 @@ const FAQSection = () => {
               <AccordionItem 
                 key={faq.id} 
                 value={faq.id}
-                className="bg-white rounded-2xl px-6 border border-[var(--cal-border-light)] shadow-sm hover:shadow-md transition-shadow"
+                className="bg-white rounded-xl md:rounded-2xl px-4 md:px-6 border border-[var(--cal-border-light)] shadow-sm hover:shadow-md transition-shadow"
               >
-                <AccordionTrigger className="text-left font-semibold text-base md:text-lg text-[var(--cal-text-primary)] hover:no-underline">
+                <AccordionTrigger className="text-left font-semibold text-sm md:text-base lg:text-lg text-[var(--cal-text-primary)] hover:no-underline py-4">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-[var(--cal-text-secondary)] leading-relaxed">
+                <AccordionContent className="text-sm md:text-base text-[var(--cal-text-secondary)] leading-relaxed">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

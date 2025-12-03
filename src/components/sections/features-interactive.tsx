@@ -46,13 +46,13 @@ const FeaturesInteractive = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="py-16 lg:py-24 px-4 !w-full !h-[1285px]">
-      <h2 className="text-center text-4xl mt-36 lg:text-[48px] font-medium mb-12 lg:mb-16">
+    <section className="py-12 md:py-16 lg:py-24 px-4">
+      <h2 className="text-center text-3xl md:text-4xl lg:text-[48px] font-medium mb-8 md:mb-12 lg:mb-16 mt-8 md:mt-20 lg:mt-36">
         What does AltSelf include?
       </h2>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
-        <div className="relative mx-auto lg:mx-0 mb-12 lg:mb-0 w-full max-w-[350px]">
-          <div className="relative rounded-3xl shadow-[0_8px_40px_rgba(0,0,0,0.12)] overflow-hidden bg-white p-4 max-h-[600px] lg:max-h-[700px]">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
+        <div className="relative mx-auto lg:mx-0 mb-12 lg:mb-0 w-full max-w-[300px] md:max-w-[350px]">
+          <div className="relative rounded-3xl shadow-[0_8px_40px_rgba(0,0,0,0.12)] overflow-hidden bg-white p-3 md:p-4">
             <Image
               key={activeIndex}
               src={features[activeIndex].imageSrc}
@@ -60,40 +60,37 @@ const FeaturesInteractive = () => {
               width={350}
               height={758}
               priority
-              className="w-full h-auto max-h-[550px] lg:max-h-[650px] object-contain transition-all duration-500 ease-out mx-auto" />
-
+              className="w-full h-auto max-h-[450px] md:max-h-[550px] lg:max-h-[650px] object-contain transition-all duration-500 ease-out mx-auto" />
           </div>
-          <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3 bg-white px-4 py-2 rounded-full shadow-lg">
+          <div className="absolute -bottom-6 md:-bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 md:space-x-3 bg-white px-3 md:px-4 py-2 rounded-full shadow-lg">
             {features.map((feature, index) =>
             <button
               key={feature.id}
               onClick={() => setActiveIndex(index)}
               className={`transition-all duration-300 rounded-full ${
               activeIndex === index ?
-              "w-8 h-3 bg-black" :
-              "w-3 h-3 bg-gray-300 hover:bg-gray-400"}`
+              "w-6 md:w-8 h-2.5 md:h-3 bg-black" :
+              "w-2.5 md:w-3 h-2.5 md:h-3 bg-gray-300 hover:bg-gray-400"}`
               }
               aria-label={`Go to feature: ${feature.title}`} />
-
             )}
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 lg:gap-6 mt-8 lg:mt-0">
+        <div className="flex flex-col gap-3 md:gap-4 lg:gap-6 mt-12 md:mt-8 lg:mt-0">
           {features.map((feature, index) =>
           <div
             key={feature.id}
             onClick={() => setActiveIndex(index)}
-            className={`p-8 rounded-3xl border transition-all duration-500 cursor-pointer ${
+            className={`p-5 md:p-6 lg:p-8 rounded-2xl md:rounded-3xl border transition-all duration-500 cursor-pointer ${
             activeIndex === index ?
             "border-black bg-gray-50 shadow-[0_8px_30px_rgba(0,0,0,0.12)] scale-[1.02]" :
             "border-gray-200 bg-white shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_6px_25px_rgba(0,0,0,0.1)] hover:border-gray-300"}`
             }>
-
-              <h3 className="text-xl lg:text-2xl font-semibold mb-3">
+              <h3 className="text-lg md:text-xl lg:text-2xl font-semibold mb-2 md:mb-3">
                 {feature.title}
               </h3>
-              <p className="text-sm lg:text-base text-gray-600 leading-relaxed">
+              <p className="text-sm md:text-base text-gray-600 leading-relaxed">
                 {feature.description}
               </p>
             </div>
@@ -101,7 +98,6 @@ const FeaturesInteractive = () => {
         </div>
       </div>
     </section>);
-
 };
 
 export default FeaturesInteractive;
