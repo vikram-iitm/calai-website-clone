@@ -64,7 +64,7 @@ export default function DarkModeFeature() {
   return (
     <section
       id="capabilities"
-      className="py-32 lg:py-64 px-4 overflow-hidden !w-full !h-[1465px]">
+      className="py-32 lg:py-64 px-4 overflow-hidden !w-full !h-[1210px]">
 
       <div className="max-w-screen-xl mx-auto">
         {/* Header */}
