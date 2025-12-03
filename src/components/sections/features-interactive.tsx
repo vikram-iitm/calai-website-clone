@@ -60,7 +60,7 @@ const FeaturesInteractive = () => {
             height={1516}
             priority
             quality={95}
-            className="w-full max-w-[300px] lg:max-w-[500px] h-auto mx-auto" />
+            className="max-w-[300px] mx-auto !w-[438px] !h-full lg:!max-w-[438px]" />
 
           <div className="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2 flex space-x-2">
             {features.map((feature, index) =>
