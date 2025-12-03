@@ -3,8 +3,12 @@
 import { Star } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { WaitlistDialog } from "@/components/waitlist-dialog";
+import { useState } from "react";
 
 const RatingsCta = () => {
+    const [isDialogOpen, setIsDialogOpen] = useState(false);
+
     return (
         <section className="py-16 md:py-32">
             <div className="container mx-auto text-center">
@@ -48,6 +52,7 @@ const RatingsCta = () => {
                     <Button 
                         size="lg" 
                         className="bg-black text-white hover:bg-black/90 px-8 py-6 text-lg rounded-xl"
+                        onClick={() => setIsDialogOpen(true)}
                     >
                         Join the Waitlist
                     </Button>
@@ -69,6 +74,8 @@ const RatingsCta = () => {
                     <span>Launching soon</span>
                 </div>
             </div>
+
+            <WaitlistDialog open={isDialogOpen} onOpenChange={setIsDialogOpen} />
         </section>
     );
 };
