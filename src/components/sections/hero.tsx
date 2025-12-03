@@ -12,22 +12,22 @@ const HeroSection = () => {
               alt="User avatar 1"
               width={38}
               height={38}
-              className="rounded-full object-cover border-2 border-white z-10"
-            />
+              className="rounded-full object-cover border-2 border-white z-10" />
+
             <Image
               src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/a974e5ea-fdb8-47ff-8492-3699a34ab4d8-calai-app/assets/icons/used-by-2-2.png"
               alt="User avatar 2"
               width={38}
               height={38}
-              className="rounded-full object-cover border-2 border-white z-20"
-            />
+              className="rounded-full object-cover border-2 border-white z-20" />
+
             <Image
               src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/a974e5ea-fdb8-47ff-8492-3699a34ab4d8-calai-app/assets/icons/used-by-3-3.png"
               alt="User avatar 3"
               width={38}
               height={38}
-              className="rounded-full object-cover border-2 border-white z-30"
-            />
+              className="rounded-full object-cover border-2 border-white z-30" />
+
           </div>
           <div className="font-medium text-xs sm:text-sm text-cal-text-primary">
             Trusted by thousands with ⭐ 4.9 rating
@@ -55,26 +55,26 @@ const HeroSection = () => {
             href="https://apps.apple.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="block"
-          >
+            className="block">
+
             <Image
               src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/2-1764747145943.png?width=8000&height=8000&resize=contain"
               alt="Download on the App Store"
               width={135}
               height={60}
-              className="h-[60px] w-auto object-contain"
-            />
+              className="object-contain !w-full !h-full !max-w-full" />
+
           </Link>
           <a
             href="#"
-            className="block"
-          >
+            className="block">
+
             <Image
               src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/a974e5ea-fdb8-47ff-8492-3699a34ab4d8-calai-app/assets/images/googleplay-1.png"
               alt="Get it on Google Play"
               width={170}
-              height={60}
-            />
+              height={60} />
+
           </a>
         </div>
       </div>
@@ -88,27 +88,27 @@ const HeroSection = () => {
             width={280}
             height={600}
             className="rounded-3xl shadow-2xl"
-            priority
-          />
+            priority />
+
         </div>
 
         {/* Flowing Arrow */}
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden sm:block pointer-events-none z-10">
           <svg width="140" height="100" viewBox="0 0 140 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path 
-              d="M 10 50 Q 70 20, 120 50" 
-              stroke="#000000" 
-              strokeWidth="2.5" 
+            <path
+              d="M 10 50 Q 70 20, 120 50"
+              stroke="#000000"
+              strokeWidth="2.5"
               fill="none"
+              strokeLinecap="round" />
+
+            <path
+              d="M 120 50 L 110 45 M 120 50 L 110 55"
+              stroke="#000000"
+              strokeWidth="2.5"
               strokeLinecap="round"
-            />
-            <path 
-              d="M 120 50 L 110 45 M 120 50 L 110 55" 
-              stroke="#000000" 
-              strokeWidth="2.5" 
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
+              strokeLinejoin="round" />
+
           </svg>
         </div>
 
@@ -119,12 +119,12 @@ const HeroSection = () => {
             alt="AltSelf app navigation screen"
             width={280}
             height={600}
-            className="rounded-3xl shadow-2xl"
-          />
+            className="rounded-3xl shadow-2xl" />
+
         </div>
       </div>
-    </main>
-  );
+    </main>);
+
 };
 
 export default HeroSection;
