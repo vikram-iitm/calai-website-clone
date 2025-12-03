@@ -51,7 +51,7 @@ const FeaturesInteractive = () => {
         What does AltSelf include?
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
-        <div className="relative mx-auto lg:mx-0">
+        <div className="relative mx-auto lg:mx-0 !w-[24%] !h-[500px]">
           <Image
             key={activeIndex}
             src={features[activeIndex].imageSrc}
