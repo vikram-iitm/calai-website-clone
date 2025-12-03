@@ -4,7 +4,7 @@ import FeatureSuite from "@/components/sections/feature-suite";
 import TestimonialsGrid from "@/components/sections/testimonials-grid";
 import FeaturesInteractive from "@/components/sections/features-interactive";
 import BenefitsCards from "@/components/sections/benefits-cards";
-import GroupedFeatures from "@/components/sections/grouped-features";
+import DarkModeFeature from "@/components/sections/dark-mode-feature";
 import UserReviewsSection from "@/components/sections/user-reviews";
 import RatingsCta from "@/components/sections/ratings-cta";
 import Footer from "@/components/sections/footer";
@@ -18,7 +18,7 @@ export default function Home() {
       {/* Hidden for now: <TestimonialsGrid /> */}
       <FeaturesInteractive />
       <BenefitsCards />
-      <GroupedFeatures />
+      <DarkModeFeature />
       <UserReviewsSection />
       <RatingsCta />
       <Footer />
