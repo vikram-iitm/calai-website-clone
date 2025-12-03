@@ -60,11 +60,11 @@ const HeroSection = () => {
         {/* Left Phone - Home Screen */}
         <div className="relative">
           <Image
-            src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/Generated-Image-December-03-2025-1_38PM-1764749322987.png?width=8000&height=8000&resize=contain"
+            src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/Home-Page-Final-1-1764674039611.png?width=8000&height=8000&resize=contain"
             alt="AltSelf app home screen"
             width={280}
             height={600}
-            className="rounded-3xl shadow-2xl !w-full !h-full !max-w-full"
+            className="rounded-3xl shadow-2xl"
             priority />
 
         </div>
