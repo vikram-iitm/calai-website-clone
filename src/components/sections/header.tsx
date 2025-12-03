@@ -11,36 +11,11 @@ const navLinks = [
 { name: 'About', href: '/#about' },
 { name: 'Support', href: '/#support' }];
 
-
-const AppStoreButton = () =>
-<a
-  href="#"
-  aria-label="Download on the App Store">
-
-    <Image
-    src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/2-1764761365453.png?width=8000&height=8000&resize=contain"
-    alt="Download on the App Store"
-    width={135}
-    height={60}
-    className="h-[60px] object-contain transition-opacity hover:opacity-80" />
-
-  </a>;
-
-
-const GooglePlayButton = () =>
-<a
-  href="#"
-  aria-label="Get it on Google Play">
-
-    <Image
-    src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/a974e5ea-fdb8-47ff-8492-3699a34ab4d8-calai-app/assets/images/googleplay-1.png"
-    alt="Get it on Google Play"
-    width={139}
-    height={41}
-    className="transition-opacity hover:opacity-80" />
-
-  </a>;
-
+const JoinWaitlistButton = () => (
+  <button className="bg-black text-white px-6 py-3 rounded-full font-semibold text-sm hover:bg-gray-800 transition-all duration-300 hover:scale-105 shadow-lg whitespace-nowrap">
+    Join the waitlist
+  </button>
+);
 
 const NavLink = ({ name, href }: {name: string;href: string;}) => {
   const isInternal = href.startsWith('/');
@@ -99,16 +74,14 @@ const Header = () => {
                 </li>
               )}
             </ul>
-            <div className="mt-3 flex origin-left scale-90 transform items-center gap-4">
-              <AppStoreButton />
-              <GooglePlayButton />
+            <div className="mt-3 flex justify-center">
+              <JoinWaitlistButton />
             </div>
           </div>
         </div>
 
-        <div className="hidden min-w-[288px] items-center justify-end gap-4 lg:flex">
-          <AppStoreButton />
-          <GooglePlayButton />
+        <div className="hidden lg:flex">
+          <JoinWaitlistButton />
         </div>
       </div>
     </header>);

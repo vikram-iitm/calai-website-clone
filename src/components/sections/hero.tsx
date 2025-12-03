@@ -30,31 +30,9 @@ const HeroSection = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 items-center">
-          {/* Hidden for now
-          <a
-            href="#"
-            className="block">
-
-            <Image
-              src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/2-1764761365453.png?width=8000&height=8000&resize=contain"
-              alt="Download on the App Store"
-              width={135}
-              height={60}
-              className="object-contain !w-full !h-full !max-w-full" />
-
-          </a>
-          */}
-          <a
-            href="#"
-            className="block">
-
-            <Image
-              src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/a974e5ea-fdb8-47ff-8492-3699a34ab4d8-calai-app/assets/images/googleplay-1.png"
-              alt="Get it on Google Play"
-              width={170}
-              height={60} />
-
-          </a>
+          <button className="bg-black text-white px-8 py-4 rounded-full font-semibold text-base hover:bg-gray-800 transition-all duration-300 hover:scale-105 shadow-lg">
+            Join the waitlist
+          </button>
         </div>
       </div>
 

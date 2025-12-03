@@ -12,31 +12,6 @@ const TiktokIcon = (props: React.SVGProps<SVGSVGElement>) =>
     <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97v7.47c0 2.92-2.36 5.28-5.28 5.28-2.91 0-5.28-2.36-5.28-5.28 0-2.91 2.37-5.28 5.28-5.28.01 0 .02 0 .03 0v4.03c-1.13 0-2.14-.88-2.14-2.13 0-1.25.99-2.14 2.14-2.14h.01v-4.04c-2.51 0-4.9.63-6.92 1.85V7.18c2.25-1.12 4.75-1.74 7.37-1.75v.02h.01z" />
   </svg>;
 
-
-const AppStoreButton = () =>
-<a href="https://apps.apple.com/us/app/cal-ai-calorie-tracker/id6480417616?ppid=0fdd527c-4a8a-4b3f-9db0-ee844938c041" target="_blank" rel="noopener noreferrer">
-    <Image
-    src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/2-1764761365453.png?width=8000&height=8000&resize=contain"
-    alt="Download on the App Store"
-    width={135}
-    height={40}
-    className="h-[40px] w-auto" />
-
-  </a>;
-
-
-const GooglePlayButton = () =>
-<a href="https://play.google.com/store/apps/details?id=com.viraldevelopment.calai" target="_blank" rel="noopener noreferrer">
-    <Image
-    src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/a974e5ea-fdb8-47ff-8492-3699a34ab4d8-calai-app/assets/images/googleplay-1.png"
-    alt="Get it on Google Play"
-    width={141}
-    height={40}
-    className="h-[40px] w-auto" />
-
-  </a>;
-
-
 const Footer = () => {
   return (
     <footer className="w-full bg-cal-bg-secondary pt-20">
@@ -45,19 +20,12 @@ const Footer = () => {
           
           <div className="flex flex-col items-center md:items-start gap-4">
             <Link href="/" className="flex items-center gap-2">
-              <Image
-                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/a974e5ea-fdb8-47ff-8492-3699a34ab4d8-calai-app/assets/icons/logo-8.png"
-                alt="Cal AI Logo"
-                width={114}
-                height={34}
-                className="w-[114px] h-auto" />
-
+              <span className="text-2xl font-bold text-black">AltSelf</span>
             </Link>
-            <p className="text-cal-text-muted text-sm font-normal">Download Cal AI</p>
-            <div className="flex items-center gap-3">
-              <AppStoreButton />
-              <GooglePlayButton />
-            </div>
+            <p className="text-cal-text-muted text-sm font-normal">Join the waitlist today</p>
+            <button className="bg-black text-white px-6 py-3 rounded-full font-semibold text-sm hover:bg-gray-800 transition-all duration-300 hover:scale-105 shadow-lg">
+              Join the waitlist
+            </button>
           </div>
 
           <div className="flex flex-col items-center md:items-start md:mx-auto">

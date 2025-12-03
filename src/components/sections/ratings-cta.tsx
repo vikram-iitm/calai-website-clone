@@ -49,23 +49,10 @@ const RatingsCta = () => {
                     </div>
                 </div>
 
-                <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-                    <a href="https://apps.apple.com/us/app/cal-ai-calorie-tracker/id6480417616?ppid=0fdd527c-4a8a-4b3f-9db0-ee844938c041" target="_blank" rel="noopener noreferrer">
-                        <Image
-                            src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/a974e5ea-fdb8-47ff-8492-3699a34ab4d8-calai-app/assets/svgs/svgs_3.svg"
-                            alt="Download on the App Store"
-                            width={162}
-                            height={49}
-                        />
-                    </a>
-                    <a href="https://play.google.com/store/apps/details?id=com.viraldevelopment.calai" target="_blank" rel="noopener noreferrer">
-                        <Image
-                            src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/a974e5ea-fdb8-47ff-8492-3699a34ab4d8-calai-app/assets/images/googleplay-1.png"
-                            alt="Get it on Google Play"
-                            width={170}
-                            height={60}
-                        />
-                    </a>
+                <div className="mt-8 flex justify-center">
+                    <button className="bg-black text-white px-8 py-4 rounded-full font-semibold text-base hover:bg-gray-800 transition-all duration-300 hover:scale-105 shadow-lg">
+                        Join the waitlist
+                    </button>
                 </div>
             </div>
         </section>
