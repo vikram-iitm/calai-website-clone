@@ -14,7 +14,7 @@ const TiktokIcon = (props: React.SVGProps<SVGSVGElement>) =>
 
 
 const AppStoreButton = () =>
-<a href="https://apps.apple.com/us/app/cal-ai-calorie-tracker/id6480417616?ppid=0fdd527c-4a8a-4b3f-9db0-ee844938c041" target="_blank" rel="noopener noreferrer">
+<a href="#" className="block">
     <Image
     src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/2-1764761365453.png?width=8000&height=8000&resize=contain"
     alt="Download on the App Store"
@@ -26,7 +26,7 @@ const AppStoreButton = () =>
 
 
 const GooglePlayButton = () =>
-<a href="https://play.google.com/store/apps/details?id=com.viraldevelopment.calai" target="_blank" rel="noopener noreferrer">
+<a href="#" className="block">
     <Image
     src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/a974e5ea-fdb8-47ff-8492-3699a34ab4d8-calai-app/assets/images/googleplay-1.png"
     alt="Get it on Google Play"
@@ -45,15 +45,9 @@ const Footer = () => {
           
           <div className="flex flex-col items-center md:items-start gap-4">
             <Link href="/" className="flex items-center gap-2">
-              <Image
-                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/a974e5ea-fdb8-47ff-8492-3699a34ab4d8-calai-app/assets/icons/logo-8.png"
-                alt="Cal AI Logo"
-                width={114}
-                height={34}
-                className="w-[114px] h-auto" />
-
+              <span className="text-2xl font-bold text-cal-text-primary">AltSelf</span>
             </Link>
-            <p className="text-cal-text-muted text-sm font-normal">Download Cal AI</p>
+            <p className="text-cal-text-muted text-sm font-normal">Download AltSelf</p>
             <div className="flex items-center gap-3">
               <AppStoreButton />
               <GooglePlayButton />
@@ -70,7 +64,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link href="/terms" className="text-cal-text-muted hover:text-cal-text-primary transition-colors text-sm font-normal">
-                  Terms of use
+                  Terms & Conditions
                 </Link>
               </li>
             </ul>
@@ -80,9 +74,14 @@ const Footer = () => {
             <h3 className="font-bold text-cal-text-primary text-base mb-4">Company</h3>
             <ul className="space-y-3 text-center md:text-left">
               <li>
-                <a href="mailto:contact@calai.app" className="text-cal-text-muted hover:text-cal-text-primary transition-colors text-sm font-normal">
+                <a href="mailto:support@altself.com" className="text-cal-text-muted hover:text-cal-text-primary transition-colors text-sm font-normal">
                   Contact
                 </a>
+              </li>
+              <li>
+                <Link href="/#support" className="text-cal-text-muted hover:text-cal-text-primary transition-colors text-sm font-normal">
+                  Support
+                </Link>
               </li>
             </ul>
           </div>
@@ -94,13 +93,13 @@ const Footer = () => {
             © Copyright 2025, All rights reserved
           </p>
           <div className="flex items-center gap-5">
-            <a href="https://www.linkedin.com/company/cal-ai-app/about/" target="_blank" rel="noopener noreferrer" className="text-cal-text-secondary hover:text-cal-text-primary transition-colors">
+            <a href="#" className="text-cal-text-secondary hover:text-cal-text-primary transition-colors">
               <Linkedin size={20} />
             </a>
-            <a href="https://www.instagram.com/calai.app/" target="_blank" rel="noopener noreferrer" className="text-cal-text-secondary hover:text-cal-text-primary transition-colors">
+            <a href="#" className="text-cal-text-secondary hover:text-cal-text-primary transition-colors">
               <Instagram size={20} />
             </a>
-            <a href="https://www.tiktok.com/@cal.ai" target="_blank" rel="noopener noreferrer" className="text-cal-text-secondary hover:text-cal-text-primary transition-colors">
+            <a href="#" className="text-cal-text-secondary hover:text-cal-text-primary transition-colors">
                <TiktokIcon className="h-5 w-5" />
             </a>
           </div>
