@@ -18,11 +18,11 @@ const AppStoreButton = () =>
   aria-label="Download on the App Store">
 
     <Image
-    src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/a974e5ea-fdb8-47ff-8492-3699a34ab4d8-calai-app/assets/svgs/svgs_1.svg"
+    src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/2-1764747544409.png?width=8000&height=8000&resize=contain"
     alt="Download on the App Store"
     width={135}
-    height={41}
-    className="transition-opacity hover:opacity-80" />
+    height={60}
+    className="h-[60px] object-contain transition-opacity hover:opacity-80" />
 
   </a>;
 
