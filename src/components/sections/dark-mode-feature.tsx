@@ -8,6 +8,7 @@ const features = [
     icon: Car,
     title: "Cab Booking",
     description: "Compare Uber and Ola prices instantly, get ETAs, and book rides with deep links",
+    gradient: "from-purple-500 to-pink-500",
     apps: [
       { name: "Uber", logo: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/download-18-1764767763515.png?width=8000&height=8000&resize=contain" },
       { name: "Ola", logo: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/ani-technologies-pvt-ltd-1764767766872.webp?width=8000&height=8000&resize=contain" }
@@ -17,6 +18,7 @@ const features = [
     icon: Calendar,
     title: "Calendar Actions",
     description: "Create, edit events and check availability with seamless Google Calendar integration",
+    gradient: "from-blue-500 to-cyan-500",
     apps: [
       { name: "Google Calendar", logo: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/1725636648368_d0b4f2eca0834b833cb6_512-1764767900388.png?width=8000&height=8000&resize=contain" }
     ]
@@ -25,6 +27,7 @@ const features = [
     icon: Music,
     title: "Spotify Control",
     description: "Play, pause, skip tracks, and control your music with simple voice commands",
+    gradient: "from-green-500 to-emerald-500",
     apps: [
       { name: "Spotify", logo: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/31B2Nyzd8XL._h1_-1764767905202.png?width=8000&height=8000&resize=contain" }
     ]
@@ -33,6 +36,7 @@ const features = [
     icon: MapPin,
     title: "Navigation",
     description: "Smart routing with Google Maps for accurate turn-by-turn directions",
+    gradient: "from-orange-500 to-red-500",
     apps: [
       { name: "Google Maps", logo: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/a974e5ea-fdb8-47ff-8492-3699a34ab4d8/generated_images/google-maps-app-icon-colorful-pin-marker-18be714f-20251203131449.jpg" }
     ]
@@ -41,6 +45,7 @@ const features = [
     icon: CloudSun,
     title: "Weather & Time",
     description: "Get real-time weather updates and timezone information for any location",
+    gradient: "from-yellow-500 to-orange-500",
     apps: [
       { name: "OpenWeather", logo: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/a974e5ea-fdb8-47ff-8492-3699a34ab4d8/generated_images/openweather-app-icon-logo-orange-and-blu-d7999fbc-20251203131449.jpg" }
     ]
@@ -49,6 +54,7 @@ const features = [
     icon: MessageSquare,
     title: "General Knowledge",
     description: "Ask anything and receive instant, accurate AI-powered answers",
+    gradient: "from-indigo-500 to-purple-500",
     apps: [
       { name: "OpenAI", logo: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/images-3-1764767909601.png?width=8000&height=8000&resize=contain" }
     ]
@@ -87,35 +93,42 @@ export default function DarkModeFeature() {
             return (
               <div 
                 key={index}
-                className="group bg-white rounded-2xl p-8 shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] hover:-translate-y-1 transition-all duration-300"
+                className="group relative bg-white/80 backdrop-blur-sm rounded-3xl p-8 border border-gray-200/50 hover:border-gray-300/50 shadow-lg shadow-gray-200/50 hover:shadow-2xl hover:shadow-gray-300/30 hover:-translate-y-2 transition-all duration-500 overflow-hidden"
               >
-                {/* Icon */}
-                <div className="w-14 h-14 rounded-xl bg-gray-100 flex items-center justify-center mb-6 group-hover:bg-gray-200 transition-colors">
-                  <Icon className="w-7 h-7 text-gray-700" strokeWidth={2} />
+                {/* Gradient overlay on hover */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-[0.02] transition-opacity duration-500`} />
+                
+                {/* Icon with gradient */}
+                <div className="relative mb-6">
+                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${feature.gradient} p-[2px] shadow-lg shadow-gray-300/50`}>
+                    <div className="w-full h-full rounded-2xl bg-white flex items-center justify-center">
+                      <Icon className="w-8 h-8 text-gray-700" strokeWidth={1.5} />
+                    </div>
+                  </div>
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-bold text-cal-text-primary mb-3">
+                <h3 className="text-xl font-bold text-cal-text-primary mb-3 relative">
                   {feature.title}
                 </h3>
-                <p className="text-sm text-cal-text-secondary leading-relaxed mb-6">
+                <p className="text-sm text-cal-text-secondary leading-relaxed mb-8 relative">
                   {feature.description}
                 </p>
 
                 {/* App Icons */}
-                <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
+                <div className="flex items-center gap-4 pt-6 border-t border-gray-200/50 relative">
                   {feature.apps.map((app, appIndex) => (
-                    <div key={appIndex} className="flex items-center gap-2 group/app">
-                      <div className="w-8 h-8 rounded-lg overflow-hidden bg-white shadow-sm ring-1 ring-gray-200 group-hover/app:ring-gray-300 transition-all">
+                    <div key={appIndex} className="flex items-center gap-2.5 group/app">
+                      <div className="w-10 h-10 rounded-xl overflow-hidden bg-white shadow-md ring-1 ring-gray-200/80 group-hover/app:ring-2 group-hover/app:ring-gray-300 group-hover/app:shadow-lg transition-all duration-300">
                         <Image 
                           src={app.logo} 
                           alt={app.name}
-                          width={32}
-                          height={32}
+                          width={40}
+                          height={40}
                           className="w-full h-full object-cover"
                         />
                       </div>
-                      <span className="text-xs font-medium text-gray-600 group-hover/app:text-gray-900 transition-colors">
+                      <span className="text-sm font-semibold text-gray-700 group-hover/app:text-gray-900 transition-colors">
                         {app.name}
                       </span>
                     </div>
