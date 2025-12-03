@@ -4,32 +4,12 @@ const HeroSection = () => {
   return (
     <main className="grid grid-cols-1 lg:grid-cols-2 mt-10 items-center max-w-screen-xl mx-auto px-5 xl:px-0">
       <div className="flex flex-col gap-4 w-fit mx-auto lg:mx-0 p-5 sm:p-0 -mt-10 order-2 lg:order-1">
-        <div className="flex items-center h-[42.5px] border border-[rgba(198,198,198,0.56)] rounded-full p-1.5 pr-3 gap-2 w-fit">
-          <div className="flex -space-x-5 sm:-space-x-3">
-            <Image
-              src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/a974e5ea-fdb8-47ff-8492-3699a34ab4d8-calai-app/assets/icons/used-by-1-1.png"
-              alt="User avatar 1"
-              width={38}
-              height={38}
-              className="rounded-full object-cover border-2 border-white z-10" />
-
-            <Image
-              src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/a974e5ea-fdb8-47ff-8492-3699a34ab4d8-calai-app/assets/icons/used-by-2-2.png"
-              alt="User avatar 2"
-              width={38}
-              height={38}
-              className="rounded-full object-cover border-2 border-white z-20" />
-
-            <Image
-              src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/a974e5ea-fdb8-47ff-8492-3699a34ab4d8-calai-app/assets/icons/used-by-3-3.png"
-              alt="User avatar 3"
-              width={38}
-              height={38}
-              className="rounded-full object-cover border-2 border-white z-30" />
-
-          </div>
-          <div className="font-medium text-xs sm:text-sm text-cal-text-primary">
-            Trusted by thousands with ⭐ 4.9 rating
+        <div className="flex items-center h-[42.5px] border border-[rgba(198,198,198,0.56)] rounded-full px-4 py-2 gap-2 w-fit bg-white/80 backdrop-blur-sm">
+          <div className="flex items-center gap-2">
+            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+            <span className="font-medium text-xs sm:text-sm text-cal-text-primary">
+              🚀 Launching Soon
+            </span>
           </div>
         </div>
 
