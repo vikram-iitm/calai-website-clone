@@ -14,31 +14,31 @@ interface Feature {
 const features: Feature[] = [
   {
     id: 1,
-    title: "Track Your Food With Just a Picture",
-    description: "Snap a photo with Cal AI, and your phone's depth sensor calculates food volume. Our AI then analyzes and breaks down your meal to determine calories, protein, carbs, and fat.",
+    title: "Book Rides Instantly",
+    description: "Simply say your route and AltSelf compares Uber and Ola prices with ETAs. Tap to open your preferred app with everything pre-filled—pickup, drop-off, and route ready.",
     imageSrc: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/a974e5ea-fdb8-47ff-8492-3699a34ab4d8-calai-app/assets/images/analyzed-9.png",
-    alt: "Track Your Food With Just a Picture preview",
+    alt: "Cab booking feature preview",
   },
   {
     id: 2,
-    title: "Search Our Database of over 1 million foods",
-    description: "Quickly find and log foods from our extensive database. Search by name, brand, or scan barcodes for instant nutritional information.",
+    title: "Navigate Anywhere with Ease",
+    description: "Tell AltSelf where you want to go, and it finds the perfect match. Opens Google Maps instantly with your route ready for turn-by-turn navigation.",
     imageSrc: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/a974e5ea-fdb8-47ff-8492-3699a34ab4d8-calai-app/assets/images/analyzed-9.png",
-    alt: "Search Our Database preview",
+    alt: "Navigation feature preview",
   },
   {
     id: 3,
-    title: "Complete Progress Tracking and AI suggestions",
-    description: "Monitor your weight, measurements, and nutrition goals. Get personalized AI suggestions to stay on track and optimize your diet.",
+    title: "Manage Your Calendar Seamlessly",
+    description: "Create, edit, and cancel meetings on Google Calendar with simple voice or text commands. AltSelf checks your availability and handles invites automatically.",
     imageSrc: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/a974e5ea-fdb8-47ff-8492-3699a34ab4d8-calai-app/assets/images/analyzed-9.png",
-    alt: "Complete Progress Tracking preview",
+    alt: "Calendar management preview",
   },
   {
     id: 4,
-    title: "Keep track of your water and daily exercise",
-    description: "Log your water intake and daily exercise effortlessly. Cal AI helps you stay hydrated and active, integrating seamlessly with your fitness routine.",
+    title: "Stay Connected with Voice Calls",
+    description: "Just say the name or number, and AltSelf searches your Google Contacts to open the dialer with everything ready. Making calls has never been easier.",
     imageSrc: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/a974e5ea-fdb8-47ff-8492-3699a34ab4d8-calai-app/assets/images/analyzed-9.png",
-    alt: "Track Water and Exercise preview",
+    alt: "Voice calling feature preview",
   },
 ];
 
@@ -48,7 +48,7 @@ const FeaturesInteractive = () => {
   return (
     <section className="py-16 lg:py-24 px-4">
       <h2 className="text-center text-4xl mt-36 lg:text-[48px] font-medium mb-12 lg:mb-16">
-        What does Cal AI include?
+        What does AltSelf include?
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
         <div className="relative mx-auto lg:mx-0">

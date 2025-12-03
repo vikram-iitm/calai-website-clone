@@ -4,57 +4,75 @@ import { Check, Image as ImageIcon } from "lucide-react";
 
 const features = [
   {
-    title: "AI Writing Assistant",
-    description: "Draft emails, messages, and documents instantly with context-aware AI.",
+    title: "Cab Booking",
+    description: "Book rides effortlessly with Uber or Ola. Just tell AltSelf your route in plain language.",
     bullets: [
-      "Instant, polished responses",
-      "Consistent tone and grammar",
-      "Save hours on everyday writing",
+      "Compare prices from Uber and Ola",
+      "Get instant ETA estimates",
+      "Quick deep links to complete booking",
     ],
   },
   {
-    title: "Image Generation Studio",
-    description: "Turn simple prompts into ready-to-use visuals for slides, posts, and campaigns.",
+    title: "Navigation & Directions",
+    description: "Navigate anywhere with ease. AltSelf finds the best routes and opens Google Maps instantly.",
     bullets: [
-      "On-brand, high-quality images",
-      "Multiple styles and layouts",
-      "Fast image-to-canvas flow",
+      "Smart destination search",
+      "Turn-by-turn directions",
+      "Quick access to nearby places",
     ],
   },
   {
-    title: "Custom Workflow Bots",
-    description: "Automate repetitive workflows with bots that connect to your existing tools.",
+    title: "Calendar Management",
+    description: "Schedule meetings and manage your calendar seamlessly with Google Calendar integration.",
     bullets: [
-      "Trigger from chat or actions",
-      "Connect to email, docs, and apps",
-      "24/7 execution with logs",
+      "Create and edit events instantly",
+      "Check availability before booking",
+      "Add invitees with ease",
     ],
   },
   {
-    title: "Research & Insights Copilot",
-    description: "Summarise long content and extract key decisions in seconds.",
+    title: "Reminders & Alarms",
+    description: "Never miss important tasks with smart reminders, alarms, and countdown timers.",
     bullets: [
-      "Summarise PDFs, docs, and links",
-      "Highlight risks and opportunities",
-      "Generate ready-to-share briefs",
+      "Calendar-synced reminders",
+      "Customizable alarm notifications",
+      "Flexible countdown timers",
     ],
   },
   {
-    title: "Meetings & Calendar Assistant",
-    description: "Handle scheduling, reminders, and follow-ups automatically.",
+    title: "Voice Calling",
+    description: "Make calls instantly by voice. Search your contacts or dial numbers directly.",
     bullets: [
-      "Smart scheduling from chat",
-      "Auto-generated notes and tasks",
-      "Timely follow-up nudges",
+      "Quick contact search",
+      "Dial by number or name",
+      "Seamless dialer integration",
     ],
   },
   {
-    title: "Data & Analytics Helper",
-    description: "Ask questions about metrics and get clear answers and visuals.",
+    title: "Weather & Quick Info",
+    description: "Get current weather updates and quick utilities like calculations and conversions.",
     bullets: [
-      "Natural-language data queries",
-      "Auto-generated charts",
-      "Shareable insight snapshots",
+      "Real-time weather for any city",
+      "Unit conversions (°F↔°C)",
+      "Time zone information",
+    ],
+  },
+  {
+    title: "Music & Media Control",
+    description: "Control your music playback on Spotify and find videos on YouTube effortlessly.",
+    bullets: [
+      "Play, pause, and skip tracks",
+      "Voice-controlled Spotify",
+      "Quick YouTube video search",
+    ],
+  },
+  {
+    title: "AI-Powered Queries",
+    description: "Ask anything in text, voice, or image. Get instant, accurate answers from AI.",
+    bullets: [
+      "Natural language understanding",
+      "Image recognition and OCR",
+      "Quick, summarized responses",
     ],
   },
 ];
@@ -68,13 +86,14 @@ export default function FeatureSuite() {
           <div className="lg:sticky lg:top-32 space-y-6">
             <div className="space-y-4">
               <p className="text-xs font-medium tracking-widest uppercase text-cal-text-muted">
-                WHAT ORCHID AI CAN DO
+                WHAT ALTSELF CAN DO
               </p>
               <h2 className="text-4xl lg:text-5xl font-bold text-cal-text-primary leading-tight">
-                Unlock the Power of Orchid AI
+                Everything You Need in One App
               </h2>
               <p className="text-base lg:text-lg text-cal-text-secondary leading-relaxed max-w-md">
-                Explore a suite of AI tools designed to help you write, create, and automate everyday tasks. Mix and match features to build your perfect productivity stack.
+                AltSelf brings together all your daily tasks—from booking rides to managing your calendar. 
+                Natural input, seamless integrations, and instant actions.
               </p>
             </div>
             

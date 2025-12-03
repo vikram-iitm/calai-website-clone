@@ -29,29 +29,29 @@ const HeroSection = () => {
             />
           </div>
           <div className="font-medium text-xs sm:text-sm text-cal-text-primary">
-            Loved by 5M users with ⭐ 4.9 rating
+            Trusted by thousands with ⭐ 4.9 rating
           </div>
         </div>
 
         <h1 className="text-[52px] font-bold leading-tight text-cal-text-primary">
-          Meet Cal AI
+          Meet AltSelf
           <br />
           <span className="font-medium">
-            Track your calories
+            Your Personal AI
             <br />
-            with just a picture
+            Assistant
           </span>
         </h1>
 
         <p className="text-base font-normal opacity-60 max-w-[510px] text-cal-text-secondary">
-          Meet Cal AI, the AI-powered app for easy calorie tracking. Snap a photo,
-          scan a barcode, or describe your meal and get instant calorie and
-          nutrient info.
+          Manage your everyday tasks effortlessly with AltSelf. Book cabs, navigate, 
+          schedule meetings, set reminders, make calls, check weather, play music, 
+          and get instant answers—all with simple text or voice commands.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 items-center">
           <a
-            href="https://apps.apple.com/us/app/cal-ai-calorie-tracker/id6480417616"
+            href="#"
             className="block"
           >
             <Image
@@ -63,7 +63,7 @@ const HeroSection = () => {
             />
           </a>
           <a
-            href="https://play.google.com/store/apps/details?id=com.viraldevelopment.calai"
+            href="#"
             className="block"
           >
             <Image
@@ -77,11 +77,11 @@ const HeroSection = () => {
       </div>
 
       <div className="overflow-hidden sm:overflow-visible mx-auto pb-40 sm:pb-0 order-1 lg:order-2 relative flex items-center justify-center gap-8">
-        {/* Left Phone - Scanner Screen */}
+        {/* Left Phone - Home Screen */}
         <div className="relative">
           <Image
             src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/Home-Page-Final-1-1764674039611.png?width=8000&height=8000&resize=contain"
-            alt="SAM app home screen"
+            alt="AltSelf app home screen"
             width={280}
             height={600}
             className="rounded-3xl shadow-2xl"
@@ -109,11 +109,11 @@ const HeroSection = () => {
           </svg>
         </div>
 
-        {/* Right Phone - Results Screen */}
+        {/* Right Phone - Navigation Screen */}
         <div className="relative">
           <Image
             src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/Home-Page-Navigation-2-2-1764674039421.png?width=8000&height=8000&resize=contain"
-            alt="SAM app navigation screen"
+            alt="AltSelf app navigation screen"
             width={280}
             height={600}
             className="rounded-3xl shadow-2xl"
