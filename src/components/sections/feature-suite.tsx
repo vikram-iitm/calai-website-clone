@@ -125,24 +125,24 @@ export default function FeatureSuite() {
               {features.map((feature, index) => (
                 <div 
                   key={index}
-                  className="snap-start group relative rounded-[28px] p-8 lg:p-10 bg-[#E8EAF6] shadow-[0_2px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_4px_20px_rgba(0,0,0,0.12)] transition-all duration-300"
+                  className="snap-start group relative rounded-[20px] p-5 lg:p-8 bg-[#E8EAF6] shadow-[0_2px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_4px_20px_rgba(0,0,0,0.12)] transition-all duration-300 max-h-[220px] overflow-hidden md:max-h-none md:overflow-visible"
                 >
-                  <div className="flex flex-col md:flex-row gap-6 lg:gap-8 relative z-10">
+                  <div className="flex flex-col md:flex-row gap-4 lg:gap-6 relative z-10">
                     {/* Left: Text Content */}
-                    <div className="flex-1 space-y-5">
-                      <h3 className="text-2xl lg:text-[28px] font-medium text-[#1a1a1a] leading-tight">
+                    <div className="flex-1 space-y-3 lg:space-y-4">
+                      <h3 className="text-lg lg:text-xl font-medium text-[#1a1a1a] leading-tight">
                         {feature.title}
                       </h3>
-                      <p className="text-[15px] lg:text-[16px] text-[#4a4a4a] leading-relaxed">
+                      <p className="text-[13px] lg:text-[14px] text-[#4a4a4a] leading-relaxed">
                         {feature.description}
                       </p>
-                      <ul className="space-y-3 pt-1">
+                      <ul className="space-y-2 pt-0.5">
                         {feature.bullets.map((bullet, idx) => (
-                          <li key={idx} className="flex items-center gap-3">
-                            <div className="shrink-0 rounded-full bg-[#5C6BC0] p-1.5 flex items-center justify-center">
-                              <Check className="w-3 h-3 text-white" strokeWidth={3} />
+                          <li key={idx} className="flex items-center gap-2">
+                            <div className="shrink-0 rounded-full bg-[#5C6BC0] p-1 flex items-center justify-center">
+                              <Check className="w-2.5 h-2.5 text-white" strokeWidth={3} />
                             </div>
-                            <span className="text-[15px] font-normal text-[#2a2a2a]">
+                            <span className="text-[13px] lg:text-[14px] font-normal text-[#2a2a2a]">
                               {bullet}
                             </span>
                           </li>
@@ -151,12 +151,12 @@ export default function FeatureSuite() {
                     </div>
 
                     {/* Right: Simple Placeholder */}
-                    <div className="w-full md:w-[200px] lg:w-[220px] shrink-0 flex items-center justify-center">
+                    <div className="w-full md:w-[160px] lg:w-[180px] shrink-0 flex items-center justify-center">
                       <div 
-                        className="w-full aspect-[9/16] rounded-[20px] bg-white/40 border border-gray-200/40 shadow-sm flex flex-col items-center justify-center gap-2.5 overflow-hidden relative"
+                        className="w-full aspect-[9/16] rounded-[16px] bg-white/40 border border-gray-200/40 shadow-sm flex flex-col items-center justify-center gap-2 overflow-hidden relative"
                       >
-                        <ImageIcon className="w-8 h-8 text-gray-300" strokeWidth={1.5} />
-                        <span className="text-[11px] font-medium text-gray-400 tracking-wide">
+                        <ImageIcon className="w-6 h-6 text-gray-300" strokeWidth={1.5} />
+                        <span className="text-[10px] font-medium text-gray-400 tracking-wide">
                           App preview
                         </span>
                       </div>
