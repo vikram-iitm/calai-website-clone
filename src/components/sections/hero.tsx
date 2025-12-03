@@ -30,6 +30,7 @@ const HeroSection = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 items-center">
+          {/* Hidden for now
           <a
             href="#"
             className="block">
@@ -42,6 +43,7 @@ const HeroSection = () => {
               className="object-contain !w-full !h-full !max-w-full" />
 
           </a>
+          */}
           <a
             href="#"
             className="block">
