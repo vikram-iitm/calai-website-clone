@@ -64,7 +64,7 @@ const HeroSection = () => {
             alt="AltSelf app home screen"
             width={280}
             height={600}
-            className="rounded-3xl shadow-2xl"
+            className="rounded-3xl shadow-2xl !w-full !h-full !max-w-full"
             priority />
 
         </div>
