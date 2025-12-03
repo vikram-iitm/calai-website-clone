@@ -35,7 +35,7 @@ const HeroSection = () => {
             className="block">
 
             <Image
-              src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/2-1764747544409.png?width=8000&height=8000&resize=contain"
+              src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/2-1764761365453.png?width=8000&height=8000&resize=contain"
               alt="Download on the App Store"
               width={135}
               height={60}
