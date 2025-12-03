@@ -18,7 +18,7 @@ const features = [
     title: "Calendar Actions",
     description: "Create, edit events and check availability with seamless Google Calendar integration",
     apps: [
-      { name: "Google Calendar", logo: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/a974e5ea-fdb8-47ff-8492-3699a34ab4d8/generated_images/google-calendar-app-icon-blue-square-wit-05a742ca-20251203131450.jpg" }
+      { name: "Google Calendar", logo: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/1725636648368_d0b4f2eca0834b833cb6_512-1764767900388.png?width=8000&height=8000&resize=contain" }
     ]
   },
   {
@@ -26,7 +26,7 @@ const features = [
     title: "Spotify Control",
     description: "Play, pause, skip tracks, and control your music with simple voice commands",
     apps: [
-      { name: "Spotify", logo: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/a974e5ea-fdb8-47ff-8492-3699a34ab4d8/generated_images/spotify-app-icon-logo-bright-green-circu-b1496455-20251203131449.jpg" }
+      { name: "Spotify", logo: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/31B2Nyzd8XL._h1_-1764767905202.png?width=8000&height=8000&resize=contain" }
     ]
   },
   {
@@ -50,7 +50,7 @@ const features = [
     title: "General Knowledge",
     description: "Ask anything and receive instant, accurate AI-powered answers",
     apps: [
-      { name: "OpenAI", logo: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/a974e5ea-fdb8-47ff-8492-3699a34ab4d8/generated_images/openai-app-icon-logo-black-square-with-t-abf6733a-20251203131449.jpg" }
+      { name: "OpenAI", logo: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/images-3-1764767909601.png?width=8000&height=8000&resize=contain" }
     ]
   }
 ];
