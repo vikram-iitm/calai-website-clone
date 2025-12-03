@@ -52,16 +52,26 @@ const FeaturesInteractive = () => {
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
         <div className="relative mx-auto lg:mx-0 mb-12 lg:mb-0 w-full max-w-[350px]">
-          <div className="relative rounded-3xl shadow-[0_8px_40px_rgba(0,0,0,0.12)] overflow-hidden bg-white p-4 max-h-[600px] lg:max-h-[700px]">
+          <div className="relative w-full aspect-[9/19.5]">
+            {/* iPhone mockup frame */}
             <Image
-              key={activeIndex}
-              src={features[activeIndex].imageSrc}
-              alt={features[activeIndex].alt}
-              width={350}
-              height={758}
+              src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/a974e5ea-fdb8-47ff-8492-3699a34ab4d8/generated_images/iphone-15-pro-mockup-frame-template-blac-972b0644-20251203145222.jpg"
+              alt="iPhone frame"
+              fill
+              className="object-contain z-10 pointer-events-none"
               priority
-              className="w-full h-auto max-h-[550px] lg:max-h-[650px] object-contain transition-all duration-500 ease-out mx-auto"
             />
+            {/* App screenshot inside frame */}
+            <div className="absolute inset-[3%] rounded-[8%] overflow-hidden">
+              <Image
+                key={activeIndex}
+                src={features[activeIndex].imageSrc}
+                alt={features[activeIndex].alt}
+                fill
+                priority
+                className="object-cover transition-all duration-500 ease-out"
+              />
+            </div>
           </div>
           <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3 bg-white px-4 py-2 rounded-full shadow-lg">
             {features.map((feature, index) => (
