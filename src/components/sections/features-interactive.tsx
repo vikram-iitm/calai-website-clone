@@ -56,10 +56,11 @@ const FeaturesInteractive = () => {
             key={activeIndex}
             src={features[activeIndex].imageSrc}
             alt={features[activeIndex].alt}
-            width={350}
-            height={758}
+            width={700}
+            height={1516}
             priority
-            className="w-[300px] transition-opacity duration-300 ease-in-out mx-auto mix-blend-multiply lg:!w-full !h-full !max-w-full" />
+            quality={95}
+            className="w-full max-w-[300px] lg:max-w-[500px] h-auto mx-auto" />
 
           <div className="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2 flex space-x-2">
             {features.map((feature, index) =>
