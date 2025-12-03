@@ -1,5 +1,8 @@
+"use client";
+
+import { Star } from "lucide-react";
 import Image from "next/image";
-import { Star, Apple, Play } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const RatingsCta = () => {
     return (
@@ -23,7 +26,7 @@ const RatingsCta = () => {
                     </div>
 
                     <h2 className="text-4xl font-bold leading-tight lg:text-5xl">
-                        Over 100k 5-star ratings
+                        Be Among the First to Experience AltSelf
                     </h2>
 
                     <div className="absolute -right-36 top-1/2 hidden -translate-y-1/2 -scale-x-100 lg:block">
@@ -37,22 +40,33 @@ const RatingsCta = () => {
                     </div>
                 </div>
 
-                <div className="mt-8 flex items-center justify-center gap-4 text-lg text-zinc-700">
-                    <div className="flex items-center gap-2">
-                        <Apple className="h-5 w-5" />
-                        <p>4.8/5</p>
-                    </div>
-                    <span>•</span>
-                    <div className="flex items-center gap-2">
-                        <Play className="h-5 w-5 fill-current" />
-                        <p>4.7/5</p>
-                    </div>
+                <p className="mt-6 text-lg text-[var(--cal-text-muted)] max-w-2xl mx-auto">
+                    Join our exclusive waitlist and get early access when we launch. Be part of the AI assistant revolution.
+                </p>
+
+                <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <Button 
+                        size="lg" 
+                        className="bg-black text-white hover:bg-black/90 px-8 py-6 text-lg rounded-xl"
+                    >
+                        Join the Waitlist
+                    </Button>
+                    <Button 
+                        size="lg" 
+                        variant="outline"
+                        className="border-2 border-black text-black hover:bg-black hover:text-white px-8 py-6 text-lg rounded-xl"
+                    >
+                        Learn More
+                    </Button>
                 </div>
 
-                <div className="mt-8 flex justify-center">
-                    <button className="bg-black text-white px-8 py-4 rounded-full font-semibold text-base hover:bg-gray-800 transition-all duration-300 hover:scale-105 shadow-lg">
-                        Join the waitlist
-                    </button>
+                <div className="mt-8 flex items-center justify-center gap-2 text-sm text-[var(--cal-text-muted)]">
+                    <span className="flex items-center gap-1">
+                        <span className="inline-block w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                        Limited spots available
+                    </span>
+                    <span>•</span>
+                    <span>Launching soon</span>
                 </div>
             </div>
         </section>
