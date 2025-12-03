@@ -9,7 +9,7 @@ import { WaitlistDialog } from '@/components/waitlist-dialog';
 const navLinks = [
 { name: 'Home', href: '/' },
 { name: 'Features', href: '/#capabilities' },
-{ name: 'Support', href: '/#faq' }];
+{ name: 'FAQ', href: '/#faq' }];
 
 const JoinWaitlistButton = ({ onClick }: { onClick: () => void }) => (
   <button 
