@@ -47,7 +47,7 @@ const FeaturesInteractive = () => {
 
   return (
     <section className="py-16 lg:py-24 px-4">
-      <h2 className="text-center text-4xl mt-36 lg:text-[48px] font-medium mb-12 lg:mb-16">
+      <h2 className="text-center text-4xl lg:text-[48px] font-medium mb-12 lg:mb-16">
         What does AltSelf include?
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
