@@ -14,7 +14,7 @@ const TiktokIcon = (props: React.SVGProps<SVGSVGElement>) =>
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-cal-bg-secondary pt-20">
+    <footer className="w-full bg-gray-50 pt-20">
       <div className="container mx-auto px-5 lg:px-0">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-8 pb-12">
           
