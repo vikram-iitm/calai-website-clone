@@ -4,42 +4,9 @@ import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
-    <main className="grid grid-cols-1 lg:grid-cols-2 mt-10 items-center max-w-screen-xl mx-auto px-5 xl:px-0 gap-12">
-      <div className="flex flex-col gap-4 w-fit mx-auto lg:mx-0 p-5 sm:p-0 -mt-10 order-2 lg:order-1">
-        <div className="flex items-center h-[42.5px] border border-[rgba(198,198,198,0.56)] rounded-full px-4 py-2 gap-2 w-fit bg-white/80 backdrop-blur-sm">
-          <div className="flex items-center gap-2">
-            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-            <span className="font-medium text-xs sm:text-sm text-cal-text-primary">
-              🚀 Launching Soon
-            </span>
-          </div>
-        </div>
-
-        <h1 className="text-[52px] font-bold leading-tight text-cal-text-primary">
-          Meet AltSelf
-          <br />
-          <span className="font-medium">
-            Your Personal AI
-            <br />
-            Assistant
-          </span>
-        </h1>
-
-        <p className="text-base font-normal opacity-60 max-w-[510px] text-cal-text-secondary">
-          Manage your everyday tasks effortlessly with AltSelf. Book cabs, navigate, 
-          schedule meetings, set reminders, make calls, check weather, play music, 
-          and get instant answers—all with simple text or voice commands.
-        </p>
-
-        <div className="flex flex-col sm:flex-row gap-4 items-center">
-          <button className="bg-black text-white px-8 py-4 rounded-full font-semibold text-base hover:bg-gray-800 transition-all duration-300 hover:scale-105 shadow-lg">
-            Join the waitlist
-          </button>
-        </div>
-      </div>
-
-      {/* Futuristic AI Voice Visualization */}
-      <div className="order-1 lg:order-2 relative flex items-center justify-center h-[600px] w-full overflow-hidden">
+    <main className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+      {/* Full-screen Futuristic AI Background */}
+      <div className="absolute inset-0 z-0">
         {/* Animated grid background */}
         <div className="absolute inset-0 opacity-20">
           <motion.div
@@ -93,7 +60,7 @@ const HeroSection = () => {
 
         {/* Central AI Core with enhanced effects */}
         <motion.div
-          className="relative z-10 w-72 h-72 rounded-full flex items-center justify-center"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full flex items-center justify-center"
           animate={{
             boxShadow: [
               "0 0 80px rgba(6, 182, 212, 0.8), 0 0 120px rgba(139, 92, 246, 0.6), inset 0 0 60px rgba(236, 72, 153, 0.4)",
@@ -129,7 +96,7 @@ const HeroSection = () => {
 
           {/* Core sphere */}
           <motion.div
-            className="relative w-56 h-56 rounded-full bg-gradient-to-br from-cyan-400 via-violet-500 to-fuchsia-500 flex items-center justify-center shadow-2xl"
+            className="relative w-72 h-72 rounded-full bg-gradient-to-br from-cyan-400 via-violet-500 to-fuchsia-500 flex items-center justify-center shadow-2xl"
             animate={{
               scale: [1, 1.05, 1],
             }}
@@ -154,7 +121,7 @@ const HeroSection = () => {
 
             {/* Inner core with voice waves */}
             <motion.div
-              className="relative w-40 h-40 rounded-full bg-gradient-to-br from-white/95 to-white/80 backdrop-blur-xl flex items-center justify-center shadow-inner"
+              className="relative w-52 h-52 rounded-full bg-gradient-to-br from-white/95 to-white/80 backdrop-blur-xl flex items-center justify-center shadow-inner"
               animate={{
                 scale: [1, 1.08, 1],
               }}
@@ -166,8 +133,8 @@ const HeroSection = () => {
             >
               {/* Enhanced voice wave bars */}
               <svg
-                width="80"
-                height="80"
+                width="100"
+                height="100"
                 viewBox="0 0 80 80"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -247,13 +214,11 @@ const HeroSection = () => {
         {[...Array(12)].map((_, i) => (
           <motion.div
             key={`particle-${i}`}
-            className="absolute w-4 h-4 rounded-full"
+            className="absolute w-4 h-4 rounded-full top-1/2 left-1/2"
             style={{
               background: `linear-gradient(135deg, ${
                 i % 3 === 0 ? "#06b6d4" : i % 3 === 1 ? "#8b5cf6" : "#ec4899"
               }, ${i % 3 === 0 ? "#3b82f6" : i % 3 === 1 ? "#d946ef" : "#f97316"})`,
-              top: "50%",
-              left: "50%",
               boxShadow: `0 0 20px ${
                 i % 3 === 0
                   ? "rgba(6, 182, 212, 0.8)"
@@ -265,14 +230,14 @@ const HeroSection = () => {
             animate={{
               x: [
                 0,
-                Math.cos((i * Math.PI * 2) / 12) * 220,
-                Math.cos((i * Math.PI * 2) / 12 + Math.PI) * 220,
+                Math.cos((i * Math.PI * 2) / 12) * 300,
+                Math.cos((i * Math.PI * 2) / 12 + Math.PI) * 300,
                 0,
               ],
               y: [
                 0,
-                Math.sin((i * Math.PI * 2) / 12) * 220,
-                Math.sin((i * Math.PI * 2) / 12 + Math.PI) * 220,
+                Math.sin((i * Math.PI * 2) / 12) * 300,
+                Math.sin((i * Math.PI * 2) / 12 + Math.PI) * 300,
                 0,
               ],
               scale: [0.8, 1.4, 0.8],
@@ -291,7 +256,7 @@ const HeroSection = () => {
         {[0, 1, 2, 3].map((i) => (
           <motion.div
             key={`ring-${i}`}
-            className="absolute inset-0 rounded-full border-2"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full border-2"
             style={{
               borderColor:
                 i === 0
@@ -303,7 +268,7 @@ const HeroSection = () => {
                   : "rgba(14, 165, 233, 0.4)",
             }}
             animate={{
-              scale: [1, 2],
+              scale: [1, 2.5],
               opacity: [0.6, 0],
             }}
             transition={{
@@ -317,7 +282,7 @@ const HeroSection = () => {
 
         {/* Enhanced floating geometric shapes */}
         <motion.div
-          className="absolute top-16 right-24 w-20 h-20 bg-gradient-to-br from-cyan-400/50 to-violet-600/50 backdrop-blur-md rounded-2xl shadow-lg"
+          className="absolute top-[15%] right-[15%] w-20 h-20 bg-gradient-to-br from-cyan-400/50 to-violet-600/50 backdrop-blur-md rounded-2xl shadow-lg"
           style={{
             boxShadow: "0 0 40px rgba(6, 182, 212, 0.5)",
           }}
@@ -333,7 +298,7 @@ const HeroSection = () => {
           }}
         />
         <motion.div
-          className="absolute bottom-28 left-12 w-16 h-16 bg-gradient-to-br from-fuchsia-400/50 to-purple-600/50 backdrop-blur-md rounded-full shadow-lg"
+          className="absolute bottom-[20%] left-[10%] w-16 h-16 bg-gradient-to-br from-fuchsia-400/50 to-purple-600/50 backdrop-blur-md rounded-full shadow-lg"
           style={{
             boxShadow: "0 0 40px rgba(236, 72, 153, 0.5)",
           }}
@@ -349,7 +314,7 @@ const HeroSection = () => {
           }}
         />
         <motion.div
-          className="absolute top-36 left-20 w-12 h-12 bg-gradient-to-br from-violet-400/50 to-cyan-600/50 backdrop-blur-md rounded-lg shadow-lg"
+          className="absolute top-[25%] left-[12%] w-12 h-12 bg-gradient-to-br from-violet-400/50 to-cyan-600/50 backdrop-blur-md rounded-lg shadow-lg"
           style={{
             boxShadow: "0 0 30px rgba(139, 92, 246, 0.5)",
           }}
@@ -365,7 +330,7 @@ const HeroSection = () => {
           }}
         />
         <motion.div
-          className="absolute bottom-40 right-16 w-10 h-10 bg-gradient-to-br from-blue-400/50 to-pink-600/50 backdrop-blur-md rounded-xl shadow-lg"
+          className="absolute bottom-[25%] right-[12%] w-10 h-10 bg-gradient-to-br from-blue-400/50 to-pink-600/50 backdrop-blur-md rounded-xl shadow-lg"
           style={{
             boxShadow: "0 0 30px rgba(59, 130, 246, 0.5)",
           }}
@@ -388,16 +353,16 @@ const HeroSection = () => {
             key={`stream-${i}`}
             className="absolute h-0.5 rounded-full"
             style={{
-              width: "80px",
+              width: "120px",
               background: `linear-gradient(90deg, transparent, ${
                 i % 2 === 0 ? "#06b6d4" : "#8b5cf6"
               }, transparent)`,
-              top: `${20 + i * 15}%`,
-              left: i % 2 === 0 ? "10%" : "auto",
-              right: i % 2 === 0 ? "auto" : "10%",
+              top: `${20 + i * 12}%`,
+              left: i % 2 === 0 ? "5%" : "auto",
+              right: i % 2 === 0 ? "auto" : "5%",
             }}
             animate={{
-              x: i % 2 === 0 ? [0, 300] : [0, -300],
+              x: i % 2 === 0 ? [0, 400] : [0, -400],
               opacity: [0, 1, 0],
             }}
             transition={{
@@ -409,6 +374,49 @@ const HeroSection = () => {
           />
         ))}
       </div>
+
+      {/* Glassmorphic Content Container */}
+      <motion.div
+        className="relative z-10 max-w-4xl mx-auto px-6"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        <div className="bg-white/10 backdrop-blur-2xl rounded-[32px] border border-white/20 shadow-2xl p-8 sm:p-12 md:p-16">
+          <div className="flex flex-col items-center text-center gap-6">
+            {/* Status Badge */}
+            <div className="flex items-center h-[42.5px] border border-white/30 rounded-full px-6 py-2 gap-2 bg-white/20 backdrop-blur-sm">
+              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+              <span className="font-medium text-sm text-white">
+                🚀 Launching Soon
+              </span>
+            </div>
+
+            {/* Heading */}
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight text-white">
+              Meet AltSelf
+              <br />
+              <span className="font-medium bg-gradient-to-r from-cyan-300 via-violet-300 to-fuchsia-300 bg-clip-text text-transparent">
+                Your Personal AI
+                <br />
+                Assistant
+              </span>
+            </h1>
+
+            {/* Description */}
+            <p className="text-base sm:text-lg font-normal text-white/90 max-w-2xl">
+              Manage your everyday tasks effortlessly with AltSelf. Book cabs, navigate, 
+              schedule meetings, set reminders, make calls, check weather, play music, 
+              and get instant answers—all with simple text or voice commands.
+            </p>
+
+            {/* CTA Button */}
+            <button className="bg-white text-gray-900 px-10 py-4 rounded-full font-semibold text-base hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-2xl mt-2">
+              Join the waitlist
+            </button>
+          </div>
+        </div>
+      </motion.div>
     </main>
   );
 };
