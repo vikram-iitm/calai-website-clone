@@ -9,8 +9,8 @@ const features = [
     title: "Cab Booking",
     description: "Compare Uber and Ola prices instantly, get ETAs, and book rides with deep links",
     apps: [
-      { name: "Uber", logo: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/a974e5ea-fdb8-47ff-8492-3699a34ab4d8/generated_images/uber-app-icon-logo-black-square-with-whi-181e821f-20251203131448.jpg" },
-      { name: "Ola", logo: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/a974e5ea-fdb8-47ff-8492-3699a34ab4d8/generated_images/ola-cabs-app-icon-logo-green-and-white-c-d3340711-20251203131449.jpg" }
+      { name: "Uber", logo: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/download-18-1764767763515.png?width=8000&height=8000&resize=contain" },
+      { name: "Ola", logo: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/ani-technologies-pvt-ltd-1764767766872.webp?width=8000&height=8000&resize=contain" }
     ]
   },
   {
