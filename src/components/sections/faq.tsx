@@ -48,7 +48,7 @@ const faqData: FAQItem[] = [
 
 const FAQSection = () => {
   return (
-    <section className="py-24 sm:py-32 bg-gradient-to-b from-[#FFFFF0] to-[#F0F8FF]">
+    <section id="faq" className="py-24 sm:py-32 bg-gradient-to-b from-[#FFFFF0] to-[#F0F8FF]">
       <div className="container mx-auto px-4">
         <h2 className="text-center text-4xl/[1.2] md:text-[48px] font-medium text-[var(--cal-text-primary)] mb-4">
           Frequently Asked Questions
