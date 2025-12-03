@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Mic } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -8,9 +9,20 @@ const HeroSection = () => {
       <div className="flex flex-col gap-4 w-fit mx-auto lg:mx-0 p-5 sm:p-0 -mt-10 order-2 lg:order-1">
         <div className="flex items-center h-[42.5px] border border-[rgba(198,198,198,0.56)] rounded-full px-4 py-2 gap-2 w-fit bg-white/80 backdrop-blur-sm">
           <div className="flex items-center gap-2">
-            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+            <motion.div 
+              className="w-2 h-2 bg-green-500 rounded-full"
+              animate={{ 
+                scale: [1, 1.3, 1],
+                opacity: [1, 0.7, 1]
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            />
             <span className="font-medium text-xs sm:text-sm text-cal-text-primary">
-              🚀 Launching Soon
+              🎙️ Always Listening
             </span>
           </div>
         </div>
@@ -19,26 +31,44 @@ const HeroSection = () => {
           Meet AltSelf
           <br />
           <span className="font-medium">
-            Your Personal AI
+            Your Intelligent
             <br />
-            Assistant
+            Voice Companion
           </span>
         </h1>
 
         <p className="text-base font-normal opacity-60 max-w-[510px] text-cal-text-secondary">
-          Manage your everyday tasks effortlessly with AltSelf. Book cabs, navigate, 
-          schedule meetings, set reminders, make calls, check weather, play music, 
-          and get instant answers—all with simple text or voice commands.
+          Experience a truly intelligent AI assistant that understands context, remembers your preferences, and executes complex tasks—all through natural conversation. Just speak, and AltSelf handles the rest.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 items-center">
-          <button className="bg-black text-white px-8 py-4 rounded-full font-semibold text-base hover:bg-gray-800 transition-all duration-300 hover:scale-105 shadow-lg">
-            Join the waitlist
+        {/* Voice command examples */}
+        <div className="flex flex-col gap-2 mt-2">
+          <div className="flex items-center gap-2 text-sm text-cal-text-muted">
+            <div className="w-1.5 h-1.5 rounded-full bg-blue-500"></div>
+            <span className="italic">"Book me an Uber to the airport at 6 AM"</span>
+          </div>
+          <div className="flex items-center gap-2 text-sm text-cal-text-muted">
+            <div className="w-1.5 h-1.5 rounded-full bg-purple-500"></div>
+            <span className="italic">"Schedule a team meeting for tomorrow afternoon"</span>
+          </div>
+          <div className="flex items-center gap-2 text-sm text-cal-text-muted">
+            <div className="w-1.5 h-1.5 rounded-full bg-pink-500"></div>
+            <span className="italic">"What's on my agenda today?"</span>
+          </div>
+        </div>
+
+        <div className="flex flex-col sm:flex-row gap-4 items-center mt-2">
+          <button className="bg-black text-white px-8 py-4 rounded-full font-semibold text-base hover:bg-gray-800 transition-all duration-300 hover:scale-105 shadow-lg flex items-center gap-2">
+            <Mic className="w-5 h-5" />
+            Try Voice Demo
+          </button>
+          <button className="border-2 border-black text-black px-8 py-4 rounded-full font-semibold text-base hover:bg-black hover:text-white transition-all duration-300 hover:scale-105">
+            Join Waitlist
           </button>
         </div>
       </div>
 
-      {/* Modern AI Voice Visualization */}
+      {/* Enhanced AI Voice Visualization */}
       <div className="order-1 lg:order-2 relative flex items-center justify-center h-[600px] w-full">
         {/* Backdrop glow effects */}
         <motion.div
@@ -73,7 +103,7 @@ const HeroSection = () => {
         >
           {/* Inner core pulse */}
           <motion.div
-            className="w-48 h-48 rounded-full bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-xl flex items-center justify-center"
+            className="w-48 h-48 rounded-full bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-xl flex items-center justify-center relative"
             animate={{
               scale: [1, 1.05, 1],
             }}
@@ -83,6 +113,21 @@ const HeroSection = () => {
               ease: "easeInOut",
             }}
           >
+            {/* Microphone icon in center */}
+            <motion.div
+              className="absolute inset-0 flex items-center justify-center"
+              animate={{
+                scale: [1, 1.1, 1],
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              <Mic className="w-16 h-16 text-purple-600" />
+            </motion.div>
+
             {/* Voice wave icon */}
             <svg
               width="80"
@@ -90,6 +135,7 @@ const HeroSection = () => {
               viewBox="0 0 80 80"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              className="opacity-40"
             >
               <motion.rect
                 x="12"
@@ -218,6 +264,55 @@ const HeroSection = () => {
             delay: 2,
           }}
         />
+
+        {/* Floating command bubbles */}
+        <motion.div
+          className="absolute top-20 right-20 bg-white/90 backdrop-blur-md px-4 py-2 rounded-2xl shadow-lg border border-gray-200"
+          animate={{
+            y: [0, -10, 0],
+            opacity: [0.8, 1, 0.8],
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        >
+          <p className="text-xs font-medium text-gray-700">📅 Meeting scheduled</p>
+        </motion.div>
+        
+        <motion.div
+          className="absolute bottom-32 left-16 bg-white/90 backdrop-blur-md px-4 py-2 rounded-2xl shadow-lg border border-gray-200"
+          animate={{
+            y: [0, 10, 0],
+            opacity: [0.8, 1, 0.8],
+          }}
+          transition={{
+            duration: 5,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1,
+          }}
+        >
+          <p className="text-xs font-medium text-gray-700">🚗 Uber booked</p>
+        </motion.div>
+
+        <motion.div
+          className="absolute top-40 left-24 bg-white/90 backdrop-blur-md px-4 py-2 rounded-2xl shadow-lg border border-gray-200"
+          animate={{
+            x: [0, -10, 0],
+            y: [0, -5, 0],
+            opacity: [0.8, 1, 0.8],
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 2,
+          }}
+        >
+          <p className="text-xs font-medium text-gray-700">☀️ 72°F Sunny</p>
+        </motion.div>
 
         {/* Floating geometric shapes */}
         <motion.div
