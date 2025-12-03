@@ -91,33 +91,38 @@ export default function DarkModeFeature() {
             return (
               <div 
                 key={index}
-                className="group relative bg-white/80 backdrop-blur-sm rounded-3xl p-8 border border-gray-200/50 hover:border-gray-300/50 shadow-lg shadow-gray-200/50 hover:shadow-2xl hover:shadow-gray-300/30 hover:-translate-y-2 transition-all duration-500 overflow-hidden"
+                className="group relative bg-white/80 backdrop-blur-sm rounded-3xl p-8 border border-gray-200/50 shadow-lg shadow-gray-200/50 hover:-translate-y-2 transition-all duration-700 overflow-hidden hover:bg-gradient-to-br hover:from-gray-900 hover:to-black hover:border-gray-700/50 hover:shadow-2xl hover:shadow-black/40"
               >
-                {/* Gradient overlay on hover */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-[0.02] transition-opacity duration-500`} />
+                {/* Animated gradient overlay on hover */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-700`} />
+                
+                {/* Animated shine effect */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                </div>
                 
                 {/* Icon with gradient */}
                 <div className="relative mb-6">
-                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${feature.gradient} p-[2px] shadow-lg shadow-gray-300/50`}>
-                    <div className="w-full h-full rounded-2xl bg-white flex items-center justify-center">
-                      <Icon className="w-8 h-8 text-gray-700" strokeWidth={1.5} />
+                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${feature.gradient} p-[2px] shadow-lg group-hover:shadow-xl group-hover:shadow-${feature.gradient.split('-')[1]}-500/50 transition-all duration-700`}>
+                    <div className="w-full h-full rounded-2xl bg-white group-hover:bg-gray-900 flex items-center justify-center transition-colors duration-700">
+                      <Icon className="w-8 h-8 text-gray-700 group-hover:text-white transition-colors duration-700" strokeWidth={1.5} />
                     </div>
                   </div>
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-bold text-cal-text-primary mb-3 relative">
+                <h3 className="text-xl font-bold text-cal-text-primary group-hover:text-white mb-3 relative transition-colors duration-700">
                   {feature.title}
                 </h3>
-                <p className="text-sm text-cal-text-secondary leading-relaxed mb-8 relative">
+                <p className="text-sm text-cal-text-secondary group-hover:text-gray-300 leading-relaxed mb-8 relative transition-colors duration-700">
                   {feature.description}
                 </p>
 
                 {/* App Icons */}
-                <div className="flex items-center gap-4 pt-6 border-t border-gray-200/50 relative">
+                <div className="flex items-center gap-4 pt-6 border-t border-gray-200/50 group-hover:border-gray-700/50 relative transition-colors duration-700">
                   {feature.apps.map((app, appIndex) => (
                     <div key={appIndex} className="flex items-center gap-2.5 group/app">
-                      <div className="w-10 h-10 rounded-xl overflow-hidden bg-white shadow-md ring-1 ring-gray-200/80 group-hover/app:ring-2 group-hover/app:ring-gray-300 group-hover/app:shadow-lg transition-all duration-300">
+                      <div className="w-10 h-10 rounded-xl overflow-hidden bg-white shadow-md ring-1 ring-gray-200/80 group-hover:ring-white/20 group-hover/app:ring-2 group-hover/app:ring-white/40 group-hover/app:shadow-lg transition-all duration-700">
                         <Image 
                           src={app.logo} 
                           alt={app.name}
@@ -126,7 +131,7 @@ export default function DarkModeFeature() {
                           className="w-full h-full object-cover"
                         />
                       </div>
-                      <span className="text-sm font-semibold text-gray-700 group-hover/app:text-gray-900 transition-colors">
+                      <span className="text-sm font-semibold text-gray-700 group-hover:text-white group-hover/app:text-white transition-colors duration-700">
                         {app.name}
                       </span>
                     </div>
