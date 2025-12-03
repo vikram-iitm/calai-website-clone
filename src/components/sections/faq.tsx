@@ -16,33 +16,33 @@ type FAQItem = {
 const faqData: FAQItem[] = [
   {
     id: "item-1",
-    question: "How does Cal AI work?",
-    answer: "Cal AI uses advanced artificial intelligence to analyze photos of your meals and automatically calculate nutritional information including calories, macros, and portion sizes. Simply snap a picture of your food, and our AI does the rest!"
+    question: "How does AltSelf work?",
+    answer: "AltSelf is an intelligent voice assistant that listens to your commands and executes tasks across multiple apps. Simply speak naturally—like 'Book me an Uber to the airport' or 'Schedule a meeting tomorrow at 2 PM'—and AltSelf handles everything from comparing prices to creating calendar events. You can also use text or images for certain queries."
   },
   {
     id: "item-2",
-    question: "Is Cal AI accurate?",
-    answer: "Yes! Our AI has been trained on millions of food images and nutritional databases to provide highly accurate calorie and macro estimates. While no tracking method is 100% perfect, Cal AI delivers results comparable to manual tracking but in a fraction of the time."
+    question: "What apps and services does AltSelf integrate with?",
+    answer: "AltSelf seamlessly integrates with 10+ popular services including Uber, Ola, Google Calendar, Google Maps, Spotify, YouTube, Google Contacts, OpenWeather, and OpenAI. More integrations are being added regularly to make your daily tasks even more effortless."
   },
   {
     id: "item-3",
-    question: "What integrations does Cal AI support?",
-    answer: "Cal AI integrates seamlessly with popular fitness apps and services including Apple Health, Google Fit, MyFitnessPal, Strava, and many more. Sync your data effortlessly across all your favorite health and fitness platforms."
+    question: "Is AltSelf free to use?",
+    answer: "AltSelf is currently in development and we're building a waitlist for early access. Join the waitlist today to be among the first to experience the future of AI assistance. Pricing details will be announced closer to launch."
   },
   {
     id: "item-4",
-    question: "How much does Cal AI cost?",
-    answer: "Cal AI offers a free plan with basic features to get you started. Premium plans unlock unlimited scans, advanced analytics, meal planning features, and priority support. Download the app to see all pricing options and choose what works best for you."
+    question: "What tasks can AltSelf help me with?",
+    answer: "AltSelf can book cab rides, navigate routes, manage your calendar, set reminders and alarms, make phone calls, control Spotify playback, search YouTube, check weather, answer general questions, and much more. It's designed to handle your routine tasks so you can focus on what matters most."
   },
   {
     id: "item-5",
-    question: "Can I track my meals without taking photos?",
-    answer: "Absolutely! While our photo scanning is our signature feature, you can also manually log meals, search our extensive food database, or scan barcodes. Cal AI is flexible to fit your tracking style."
+    question: "How accurate is AltSelf's voice recognition?",
+    answer: "AltSelf uses advanced AI to understand natural language with high accuracy. It recognizes context, remembers your preferences, and handles complex multi-step requests. The more you use it, the better it understands your unique speaking style and needs."
   },
   {
     id: "item-6",
-    question: "Is my data private and secure?",
-    answer: "Your privacy is our top priority. All your personal data and photos are encrypted and stored securely. We never share your information with third parties without your explicit consent. You can delete your data at any time."
+    question: "Is my data safe and private with AltSelf?",
+    answer: "Absolutely. Your privacy is our top priority. All voice commands and personal data are encrypted and securely stored. We never share your information with third parties without your explicit consent. You have full control over your data and can delete it at any time."
   }
 ];
 
@@ -54,7 +54,7 @@ const FAQSection = () => {
           Frequently Asked Questions
         </h2>
         <p className="text-center text-lg text-[var(--cal-text-muted)] mb-16 max-w-2xl mx-auto">
-          Got questions? We've got answers. Find everything you need to know about Cal AI.
+          Got questions? We've got answers. Find everything you need to know about AltSelf.
         </p>
         
         <div className="max-w-3xl mx-auto">
