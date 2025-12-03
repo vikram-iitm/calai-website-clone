@@ -59,7 +59,7 @@ const HeroSection = () => {
               alt="Download on the App Store"
               width={170}
               height={60}
-              className="h-[50px] w-auto object-contain"
+              className="h-[60px] w-auto object-contain"
             />
           </a>
           <a
