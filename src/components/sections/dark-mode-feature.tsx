@@ -102,7 +102,7 @@ export default function DarkModeFeature() {
                 {/* Icon with gradient */}
                 <div className="relative mb-6">
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${feature.gradient} p-[2px] shadow-lg group-hover:shadow-xl transition-all duration-700`}>
-                    <div className="w-full h-full rounded-2xl bg-white group-hover:bg-gray-900 flex items-center justify-center transition-colors duration-700 p-2">
+                    <div className="w-full h-full rounded-2xl bg-gray-900 group-hover:bg-white flex items-center justify-center transition-colors duration-700 p-2">
                       <Image 
                         src={feature.icon} 
                         alt={feature.title}
